@@ -6,9 +6,9 @@ function Nav () {
     return (
         <nav>
             <ul>
-                <li><NavLink to="/" exact>Home</NavLink></li>
-                <li><NavLink to="/favorites">Favorites</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li> 
+                <li><NavLink to="/" exact className="nav-link">Home</NavLink></li>
+                <li><NavLink to="/favorites" className="nav-link">Favorites</NavLink></li>
+                <li><NavLink to="/about" className="nav-link">About</NavLink></li> 
             </ul>
         </nav>
     );
