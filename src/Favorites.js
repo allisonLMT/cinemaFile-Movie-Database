@@ -1,16 +1,15 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Nav from './Navigation';
+
 
 function Favorites() {
     
     useEffect(() => {
         document.title = 'cinemaFile - Favorites';
     }, []);
-    
+
     return (
-        <div>
-            <Nav />
+        <div className="page">
             <h1>Favorites</h1>
         </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Nav from './Navigation';
+
 
 function Home() {
 
@@ -9,8 +9,7 @@ function Home() {
     }, []);
 
     return (
-        <div>
-            <Nav />
+        <div className="page">
             <h1>Home</h1>
         </div>
     );
