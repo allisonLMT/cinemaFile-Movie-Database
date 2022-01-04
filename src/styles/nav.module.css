@@ -1,0 +1,21 @@
+nav {
+    color: #FCA311;
+  }
+  
+  ul {
+    list-style-type: none;
+    
+  }
+  
+  .navLink,
+  .navLink:visited {
+    color: #FCA311;
+    text-decoration: none;
+  }
+  
+  .navLink:focus,
+  .navLink:hover,
+  .navLink:active {
+    color: #FCA311;
+    text-decoration: underline;
+  }
