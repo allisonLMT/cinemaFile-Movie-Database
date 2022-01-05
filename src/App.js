@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import DesktopNav from './DesktopNav';
+import MobileNav from './MobileNav';
 import Home from './Home';
 import About from './About';
 import Favorites from './Favorites';
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         {/* add a Page Not Found here */}
       </Routes>
+      <MobileNav />
     </div>
   );
 }
