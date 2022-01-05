@@ -7,11 +7,15 @@ function Nav () {
     return (
         <nav>
             <ul>
-                <li><img src="./images/orange-cinemaFile.svg" alt="" className={styles.logo}/></li>
-                <li className={styles.logoText}>cinemaFile</li>
-                <li><NavLink to="/" className={styles.navLink}>Home</NavLink></li>
-                <li><NavLink to="/favorites" className={styles.navLink}>Favorites</NavLink></li>
-                <li><NavLink to="/about" className={styles.navLink}>About</NavLink></li> 
+                <div className={styles.navLogos}>
+                    <li><img src="./images/orange-cinemaFile.svg" alt="" className={styles.logo}/></li>
+                    <li className={styles.logoText}>cinemaFile</li>
+                </div>
+                <div className={styles.navMenu}>
+                    <li><NavLink to="/" className={styles.navLink}>Home</NavLink></li>
+                    <li><NavLink to="/favorites" className={styles.navLink}>Favorites</NavLink></li>
+                    <li><NavLink to="/about" className={styles.navLink}>About</NavLink></li> 
+                </div>
             </ul>
             {/* <button>BTN</button> */}
             {/* button will be the hamburger, later...display block/none  */}

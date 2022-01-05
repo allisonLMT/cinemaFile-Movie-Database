@@ -1,16 +1,26 @@
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #FCA311;
     position: fixed;
     top: 0;
+    width: 100%;
     border: 2px solid red;
   }
   
   ul {
     list-style-type: none;
     display: flex;
-    
   }
   
+  .navLogos {  
+    /* logo and logotext on left */
+    display: flex;
+    align-items: center;
+    border: 1px solid pink;
+  }
+
   .logoText {
     font-family: 'Special Elite', cursive;
     font-size: 40px;
@@ -22,7 +32,13 @@ nav {
     width: 90px;
   }
 
-
+.navMenu {
+    /* Home, Favorites, About on right side */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid green;
+}
   .navLink {
       
       padding: 40px;
