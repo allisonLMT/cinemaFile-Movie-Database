@@ -11,6 +11,18 @@ nav {
     
   }
   
+  .logoText {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+  }
+
+  .logo {
+    color: #FCA311;
+    height: 90px;
+    width: 90px;
+  }
+
+
   .navLink {
       
       padding: 40px;
