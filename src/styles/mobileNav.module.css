@@ -8,14 +8,29 @@
     color: #14213D; 
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
 .navIcons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    border: 3px dashed black;
+    
+}
+
+.clickableArea {
+    display: flex;
+    justify-content: center;
+
+    width: 33%;
+    border: 3px solid red;
 }
 
 .icon {
     border: 2px solid green;
     height: 40px;
     width: 40px;
+    
 }

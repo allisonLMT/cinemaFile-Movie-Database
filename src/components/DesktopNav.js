@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './styles/desktopNav.module.css';
+import styles from '../styles/desktopNav.module.css';
+
 
 
 function desktopNav () {
