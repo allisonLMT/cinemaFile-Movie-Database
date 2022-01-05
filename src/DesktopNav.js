@@ -18,8 +18,7 @@ function Nav () {
                     <li><NavLink to="/about" className={styles.navLink}>About</NavLink></li> 
                 </div>
             </ul>
-            {/* <button>BTN</button> */}
-            {/* button will be the hamburger, later...display block/none  */}
+           
         </nav>
     );
 }
