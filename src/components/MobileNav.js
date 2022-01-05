@@ -8,17 +8,21 @@ import about from '../images/icons/about-me-blue.svg';
 function mobileNav () {
     return (
         <nav className={styles.mobileNav}>
-            <ul className={styles.navIcons}>
+            <Link to="/" className={styles.test}>
                 <div className={styles.clickableArea}>
-                    <Link to="/" ><img src={home} alt="" className={styles.icon} /></Link>
+                    <img src={home} alt="" className={styles.icon} />
                 </div>
+            </Link>
+            <Link to="Favorites" className={styles.test}>
                 <div className={styles.clickableArea}>
-                    <Link to="Favorites" ><img src={heart} alt="" className={styles.icon} /></Link>
+                    <img src={heart} alt="" className={styles.icon} />
                 </div>
+            </Link>
+            <Link to="About" className={styles.test}>
                 <div className={styles.clickableArea}>
-                    <Link to="About" ><img src={about} alt="" className={styles.icon} /></Link>
+                    <img src={about} alt="" className={styles.icon} />
                 </div>
-            </ul>
+            </Link>
         </nav>
     );
 };

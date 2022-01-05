@@ -1,4 +1,7 @@
 .desktopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #FCA311;
     position: fixed;
     top: 0;
@@ -6,53 +9,46 @@
     border: 2px solid red;
   }
   
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navLogos {  
-    /* logo and logotext on left */
-    display: flex;
-    align-items: center;
-    border: 1px solid pink;
-  }
+.navLogos {  
+  /* logo and logotext on left */
+  display: flex;
+  align-items: center;
+  border: 1px solid pink;
+}
 
-  .logoText {
-    font-family: 'Special Elite', cursive;
-    font-size: 40px;
-    padding: 0 10px;
-  }
+.logoText {
+  font-family: 'Special Elite', cursive;
+  font-size: 40px;
+  padding: 0 10px;
+}
 
-  .logo {
-    color: #FCA311;
-    height: 90px;
-    width: 90px;
-  }
+.logo {
+  color: #FCA311;
+  height: 90px;
+  width: 90px;
+}
 
 .textNavMenu {
-    /* Home, Favorites, About on right side */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid green;
+  /* Home, Favorites, About on right side */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid green;
 }
-  .navLink {
-    padding: 40px;
-  }
+.navLink {
+  padding: 40px;
+}
 
 
-  .navLink,
-  .navLink:visited {
-    color: #FCA311;
-    text-decoration: none;
-  }
-  
-  .navLink:focus,
-  .navLink:hover,
-  .navLink:active {
-    color: #FCA311;
-    text-decoration: underline;
-  }
+.navLink,
+.navLink:visited {
+  color: #FCA311;
+  text-decoration: none;
+}
+
+.navLink:focus,
+.navLink:hover,
+.navLink:active {
+  color: #FCA311;
+  text-decoration: underline;
+}
