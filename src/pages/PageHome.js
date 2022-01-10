@@ -10,7 +10,11 @@ function Home() {
 
     return (
         <div className="page">
-            <h1>Home</h1>
+            <div className="top-movie">
+                {/* need to add components for rating and more info */}
+                {/* <img src="" alt="" /> */}
+                <h3>Movie title</h3>
+            </div>
         </div>
     );
 };
