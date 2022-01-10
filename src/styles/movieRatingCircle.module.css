@@ -1,0 +1,11 @@
+/* Rating Circle Styling */
+
+.circle {
+    height: 47px;
+    width: 47px;
+    background-color: #14213D;
+    border-radius: 50%;
+    border: 2px solid #FCA311;
+    font-size: 16px;
+    color: #FCA311;
+}

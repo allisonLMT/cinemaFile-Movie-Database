@@ -5,7 +5,7 @@ import logo from '../images/orange-cinemaFile.svg';
 
 
 
-function desktopNav () {
+function DesktopNav () {
     return (
         <nav className={styles.desktopNav}>
                 {/* should this whole div be a Link to home? */}
@@ -22,4 +22,4 @@ function desktopNav () {
     );
 }
 
-export default desktopNav;
+export default DesktopNav;

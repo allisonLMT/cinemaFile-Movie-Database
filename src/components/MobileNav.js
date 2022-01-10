@@ -5,7 +5,7 @@ import home from '../images/icons/homepage-blue.svg';
 import heart from '../images/icons/heart-thin-blue.svg';
 import about from '../images/icons/about-me-blue.svg';
 
-function mobileNav () {
+function MobileNav () {
     return (
         <nav className={styles.mobileNav}>
             <Link to="/" className={styles.test}>
@@ -27,4 +27,4 @@ function mobileNav () {
     );
 };
 
-export default mobileNav;
+export default MobileNav;
