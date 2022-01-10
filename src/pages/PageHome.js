@@ -15,6 +15,10 @@ function Home() {
                 {/* <img src="" alt="" /> */}
                 <h3>Movie title</h3>
             </div>
+            <div className="movie-cards">
+            {/* likely a for loop to render all the others */}
+           
+            </div>
         </div>
     );
 };
