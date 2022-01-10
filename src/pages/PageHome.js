@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import RatingCircle from '../components/MovieRatingCircle.js';
-
+import LrgMoreInfo from '../components/LrgMoreInfo';
 
 function Home() {
 
@@ -16,6 +16,7 @@ function Home() {
                 {/* <img src="" alt="" /> */}
                 <h3>Movie title</h3>
                 <RatingCircle />
+                <LrgMoreInfo />
             </div>
             <div className="movie-cards">
             {/* likely a for loop to render all the others */}
