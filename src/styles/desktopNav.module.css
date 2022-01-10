@@ -1,6 +1,6 @@
 .desktopNav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #FCA311;
     position: fixed;
@@ -8,36 +8,53 @@
     width: 100%;
     border: 2px solid red;
   }
+  @media (min-width: 760px) {
+    .desktopNav {
+      justify-content: space-between;
+      padding-left: 25px;
+    }
+  }
   
 .navLogos {  
   /* logo and logotext on left */
   display: flex;
   align-items: center;
-  border: 1px solid pink;
+  max-width: 320px;
 }
 
 .logoText {
   font-family: 'Special Elite', cursive;
-  font-size: 40px;
-  padding: 0 10px;
+  font-size: 38px;
+  padding: 0 5px;
 }
 
 .logo {
   color: #FCA311;
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
 }
 
 .textNavMenu {
   /* Home, Favorites, About on right side */
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid green;
 }
+
 .navLink {
   padding: 40px;
 }
+
+@media (min-width: 760px) {
+  .textNavMenu {
+    display: flex;
+  }
+  .navLink {
+    padding: 40px 60px;
+  }
+}
+
+
 
 
 .navLink,
