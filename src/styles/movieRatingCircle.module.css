@@ -1,6 +1,9 @@
 /* Rating Circle Styling */
 
 .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 47px;
     width: 47px;
     background-color: #14213D;
