@@ -6,7 +6,7 @@ import React from 'react';
 function Heart() {
     return (
         <div>
-
+            <p>+</p>
         </div>
     )
 }
