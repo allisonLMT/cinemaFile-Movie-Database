@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 
 
-function About() {
+function PageAbout() {
 
     useEffect(() => {
         document.title = 'cinemaFile - About';
@@ -15,4 +15,4 @@ function About() {
     );
 }
 
-export default About;
+export default PageAbout;

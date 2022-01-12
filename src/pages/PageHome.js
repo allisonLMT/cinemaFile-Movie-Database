@@ -1,12 +1,11 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Movies from '../components/Movies.js';
-import RatingCircle from '../components/MovieRatingCircle.js';
-import LrgMoreInfo from '../components/LrgMoreInfo';
+//import RatingCircle from '../components/MovieRatingCircle.js';
+//import LrgMoreInfo from '../components/LrgMoreInfo';
 import { API_KEY } from '../globals/variables.js';
 
 
-function Home() {
+function PageHome() {
 
     useEffect(() => {
         document.title = 'cinemaFile - Home';
@@ -15,26 +14,27 @@ function Home() {
     const [moviesData, setMovieData] = useState(null);
 
     useEffect(() => {
+        //gets the data for the first 13 movies, based on "popular"
         const fetchMovies = async () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
             const moviesData = await res.json();
-            const first12Movies = moviesData.results.splice(0, 12);
-            console.log(first12Movies); 
-            setMovieData(first12Movies);
+
+            const first13Movies = moviesData.results.splice(0, 13);
+            //first13Movies is an array of objects containing movie data
+            //console.log(first13Movies); 
+            setMovieData(first13Movies);
+            //console.log(first13Movies[0].original_title)
         }
         fetchMovies();
     }, [])
+    
 
     return (
         <div className="page">
             <section className="top-movie">
-                {/* need to add components for rating and more info */}
-                {/* <img src="" alt="" /> */}
-                <h3>Movie title</h3>
-                <RatingCircle />
-                <LrgMoreInfo />
+                
             </section>
-            <section>
+            <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
                 <p>Fetching movies... </p>}
             </section>
@@ -43,4 +43,4 @@ function Home() {
     );
 };
 
-export default Home;
+export default PageHome;

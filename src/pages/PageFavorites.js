@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 
 
-function Favorites() {
+function PageFavorites() {
     
     useEffect(() => {
         document.title = 'cinemaFile - Favorites';
@@ -15,4 +15,4 @@ function Favorites() {
     );
 };
 
-export default Favorites;
+export default PageFavorites;

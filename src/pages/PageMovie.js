@@ -2,8 +2,9 @@ import React from 'react';
 import { useEffect } from 'react';
 import Nav from './Navigation';
 
-function MoviePage() {
+function PageMovie() {
     //need to change this so the title relects the movie title, same below with the H1
+    //probably need to add a variable to the array so that this runs each time the variable changes
     useEffect(() => {
         document.title = 'cinemaFile - Home';
     }, []);
@@ -17,4 +18,4 @@ function MoviePage() {
     );
 };
 
-export default MoviePage;
+export default PageMovie;
