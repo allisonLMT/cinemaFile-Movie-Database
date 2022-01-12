@@ -1,9 +1,27 @@
 /* styling for each set of movie data (img, title, summary, etc.) */
 /*  */
 
-/* .movies is ALL the messages */
+/* .movies is ALL the movies */
 .movies {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: top;
+   flex-wrap: wrap;
    color: white; 
 }
 
 /* .movie is each single movie div */
+.movie {
+   max-width: 45%;
+   text-align: left;
+}
+
+.movie h3 {
+   margin: 0.75rem 0 0;
+   font-size: 14px;
+}
+
+.movie p {
+   margin: 0.25rem 0 0.75rem;
+   font-size: 12px;
+}
