@@ -1,6 +1,9 @@
 /* styling for each set of movie data (img, title, summary, etc.) */
 /*  */
 
+/* .movies is ALL the messages */
 .movies {
    color: white; 
 }
+
+/* .movie is each single movie div */

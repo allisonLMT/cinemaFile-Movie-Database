@@ -7,14 +7,10 @@ import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
 // movie poster, rating at top right
 //under poster, title, release date and more info icon (link which gives a pop up with the summary)
 
-//need to build the url for the img
-//neeed to get the poster file path from the moviesData prop
 
 function Movies ({ moviesData }) {
     
-    // const imgURLstart = BASE_URL+SM_POSTER_SIZE;
-      console.log(moviesData);
-    //  console.log(imgURLstart)
+  
     return (
         <div className={styles.movies}>
 

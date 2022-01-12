@@ -12,13 +12,3 @@ export const BASE_URL = 'https://image.tmdb.org/t/p/';
 //export const LRG_POSTER_SIZE = 
 export const SM_POSTER_SIZE = 'w500';
 
-
-
-
-
-//region code for Canada
-//language default is en
-//export const REGION = 'CA';
-
-
-// need to get the filepath for each image...how?

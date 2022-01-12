@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Movies from '../components/Movies.js';
+import TopMovie from '../components/TopMovie';
+import Movies from '../components/Movies';
 //import RatingCircle from '../components/MovieRatingCircle.js';
 //import LrgMoreInfo from '../components/LrgMoreInfo';
 import { API_KEY } from '../globals/variables.js';
@@ -11,6 +12,7 @@ function PageHome() {
         document.title = 'cinemaFile - Home';
     }, []);
 
+    const [topMovieData, setTopMovieData] = useState(null);
     const [moviesData, setMovieData] = useState(null);
 
     useEffect(() => {
@@ -19,11 +21,16 @@ function PageHome() {
             const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
             const moviesData = await res.json();
 
-            const first13Movies = moviesData.results.splice(0, 13);
-            //first13Movies is an array of objects containing movie data
-            //console.log(first13Movies); 
-            setMovieData(first13Movies);
-            //console.log(first13Movies[0].original_title)
+            //results in arrays of movie data
+            //splice alters the original array, once the first movie is removed the second splice needs to start at 0 again
+            const topMovie = moviesData.results.splice(0,1);
+            const next12Movies = moviesData.results.splice(0, 12);
+            console.log(moviesData)
+            console.log(topMovie)
+            console.log(next12Movies)
+            
+            setTopMovieData(topMovie);
+            setMovieData(next12Movies);
         }
         fetchMovies();
     }, [])
@@ -32,7 +39,8 @@ function PageHome() {
     return (
         <div className="page">
             <section className="top-movie">
-                
+                {topMovieData !== null ? <TopMovie topMovieData={topMovieData} /> :
+                <p>Fetching movies... </p>} 
             </section>
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
