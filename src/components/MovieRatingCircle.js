@@ -2,10 +2,12 @@
 import React from 'react';
 import styles from '../styles/movieRatingCircle.module.css';
 
-function MovieRatingCircle () {
+function MovieRatingCircle ({rating}) {
+    
+    const percent = rating * 10;
     return (
         <div className={styles.circle}>
-            <p>98%</p>
+            <p className={styles.percent}>{percent}%</p>
         </div>
     )
 }

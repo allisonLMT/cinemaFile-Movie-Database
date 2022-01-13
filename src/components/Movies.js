@@ -15,7 +15,10 @@ function Movies ({ moviesData }) {
 
             {moviesData.map(movie => 
                 <div className={styles.movie} key={movie.id}>
+                <RatingCircle rating={movie.vote_average}/>
+                {/* <a href=""> */}
                 <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
+                {/* </a> */}
                 <h3>{movie.title}</h3>
                 
                 <p>{movie.release_date}</p>
@@ -27,11 +30,7 @@ function Movies ({ moviesData }) {
                 {/* end of map */}
 
 
-            <RatingCircle />
             
-            
-            {/* <img src=`${BASE_URL}+"w500"+${API_KEY}` alt="" /> */}
-            {/* <img src="https://api.themoviedb.org/3/configuration?api_key=API_KEY" alt="" /> */}
         </div>
     )
 };

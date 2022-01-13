@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TopMovie from '../components/TopMovie';
 import Movies from '../components/Movies';
-//import RatingCircle from '../components/MovieRatingCircle.js';
-//import LrgMoreInfo from '../components/LrgMoreInfo';
 import { API_KEY } from '../globals/variables.js';
 
 
@@ -25,9 +23,9 @@ function PageHome() {
             //splice alters the original array, once the first movie is removed the second splice needs to start at 0 again
             const topMovie = moviesData.results.splice(0,1);
             const next12Movies = moviesData.results.splice(0, 12);
-            console.log(moviesData)
-            console.log(topMovie)
-            console.log(next12Movies)
+            // console.log(moviesData)
+             console.log(topMovie)
+            // console.log(next12Movies)
             
             setTopMovieData(topMovie);
             setMovieData(next12Movies);

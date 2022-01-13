@@ -12,3 +12,8 @@
     font-size: 16px;
     color: #FCA311;
 }
+
+.percent p {
+    margin: 0;
+    padding-bottom: 0;
+}
