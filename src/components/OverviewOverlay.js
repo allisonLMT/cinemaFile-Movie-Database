@@ -6,7 +6,7 @@ function OverviewOverlay () {
     return (
         <div className={styles.overview}>
             <p>{movie.overview}</p>
-            {/* need to pass Heart the movie ID to be able to favorite it */}
+            {/* need to pass Heart the movie ID(?) to be able to favorite it */}
             <Heart />
         </div>
     )
