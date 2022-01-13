@@ -21,7 +21,7 @@ function Movies ({ moviesData }) {
                 {/* </a> */}
                 <h3>{movie.title}</h3>
                 
-                <p>{movie.release_date}</p>
+                <p className={styles.date}>{movie.release_date}</p>
                 
                 {/* <p>{movie.overview}</p> */}
                 </div>

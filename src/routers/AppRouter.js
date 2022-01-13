@@ -14,6 +14,7 @@ function AppRouter() {
         <Route path="/" element={<PageHome />} />
         <Route path="favorites" element={<PageFavorites />} />
         <Route path="about" element={<PageAbout />} />
+        {/* <Route path="movies/:movieId" element={<PageIndivMovie />}></Route> */}
         {/* add a Page Not Found here */}
       </Routes>
       <MobileNav />
