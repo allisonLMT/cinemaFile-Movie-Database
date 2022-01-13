@@ -1,0 +1,8 @@
+/* Styling for overlay of Movie Overview */
+
+
+.overview {
+    background-color: black;
+    border: 3px solid #FCA311;
+    color: white;
+}
