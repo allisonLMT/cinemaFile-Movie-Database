@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TopMovie from '../components/TopMovie';
+import DropDownSort from '../components/DropDownSort';
 import Movies from '../components/Movies';
 import { API_KEY } from '../globals/variables.js';
 
@@ -40,6 +41,8 @@ function PageHome() {
                 {topMovieData !== null ? <TopMovie topMovieData={topMovieData} /> :
                 <p>Fetching movies... </p>} 
             </section>
+            <p style={{color: "#FCA311"}}>Sort By: &#9660; </p>
+            <DropDownSort />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
                 <p>Fetching movies... </p>}
