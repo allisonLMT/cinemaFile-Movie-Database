@@ -13,11 +13,12 @@ function PageHome() {
 
     const [topMovieData, setTopMovieData] = useState(null);
     const [moviesData, setMovieData] = useState(null);
+    const [sort, setSort] = useState("popular");
 
     useEffect(() => {
         //gets the data for the first 13 movies, based on "popular"
         const fetchMovies = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
             const moviesData = await res.json();
 
             //results in arrays of movie data
@@ -42,7 +43,7 @@ function PageHome() {
                 <p>Fetching movies... </p>} 
             </section>
             <p style={{color: "#FCA311"}}>Sort By: &#9660; </p>
-            <DropDownSort />
+            <DropDownSort onSortChange={setSort} />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
                 <p>Fetching movies... </p>}
