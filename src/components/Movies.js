@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '../styles/movies.module.css';
 import RatingCircle from '../components/MovieRatingCircle.js';
-import OverviewOverlay from '../components/OverviewOverlay';
+import Heart from '../components/Heart.js';
+
 import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
 
 
@@ -17,15 +18,18 @@ function Movies ({ moviesData }) {
             
             {moviesData.map(movie => 
                 <div className={styles.movie} key={movie.id}>
-                    <RatingCircle rating={movie.vote_average}/>
-                    {/* add onClick to img? change class on OverviewOverlay show/hide? */}
+                    <div>
+                        <RatingCircle rating={movie.vote_average}/>
+                        {/* add onClick to img? change class on OverviewOverlay show/hide? */}
                         <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
-                    
-                    <h3>{movie.title}</h3>
-                    <p className={styles.date}>{movie.release_date}</p>
-                    
-                    <OverviewOverlay movie={movie}/>
-                
+                    </div>
+                    <div className={styles.belowPoster}>
+                        <h3>{movie.title}</h3>
+                        <div className={styles.dateHeart}>
+                            <p className={styles.date}>{movie.release_date}</p>
+                            <Heart title={movie.title}/>
+                        </div>
+                    </div>
                 </div>
                 
                 )} 

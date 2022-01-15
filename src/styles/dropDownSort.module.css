@@ -1,6 +1,16 @@
 .sort {
-    
+    margin-bottom: 15px;
     background-color: black;
     color: #FCA311;
     text-align: center;
+
+}
+
+.sort div {
+    padding: 2px 0;
+    border-top: 1px solid #FCA311;
+}
+
+.sort div:last-child {
+    border-bottom: 1px solid #FCA311;
 }
