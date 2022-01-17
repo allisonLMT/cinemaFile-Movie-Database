@@ -43,7 +43,7 @@ function PageHome() {
                 <p>Fetching movies... </p>} 
             </section>
             <p style={{color: "#FCA311"}}>Sort By: &#9660; </p>
-            <DropDownSort onSortChange={setSort} />
+            <DropDownSort onSortChange={ setSort } />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
                 <p>Fetching movies... </p>}

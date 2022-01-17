@@ -8,7 +8,7 @@ function DropDownSort ({onSortChange}) {
     const handleSortChange = useCallback(event => {
         console.log("clicked")
         console.log(event.target.value)
-        onSortChange(event.target.value)
+        //onSortChange(event.target.value)
     }, [onSortChange])
 
     return (

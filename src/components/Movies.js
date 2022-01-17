@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/movies.module.css';
+import noPoster from '../images/no-movie-poster.jpg';
 import RatingCircle from '../components/MovieRatingCircle.js';
 import Heart from '../components/Heart.js';
 
@@ -20,8 +21,10 @@ function Movies ({ moviesData }) {
                 <div className={styles.movie} key={movie.id}>
                     <div>
                         <RatingCircle rating={movie.vote_average}/>
-                        {/* add onClick to img? change class on OverviewOverlay show/hide? */}
-                        <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
+                        {movie.poster_path === null ?
+                            <img src={noPoster} alt="No Poster Available." /> :
+                            <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
+                        }
                     </div>
                     <div className={styles.belowPoster}>
                         <h3>{movie.title}</h3>
