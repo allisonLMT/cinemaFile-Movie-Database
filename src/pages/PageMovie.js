@@ -11,7 +11,7 @@ function PageMovie() {
 
     // useParams() day 6 pg 22 and day 7?
     return (
-        <div>
+        <div className = "page">
             <h1>Movie</h1>
         </div>
     );
