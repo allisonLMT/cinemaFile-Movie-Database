@@ -17,10 +17,9 @@ function AppRouter() {
         <Route path='/sort/top-rated' element={<PageHome sort='top_rated'/>} />
         <Route path='/sort/now-playing' element={<PageHome sort='now_playing'/>} />
         <Route path='/sort/upcoming' element={<PageHome sort='upcoming'/>} />
-        <Route path= "/movies/:id" element={<PageSingleMovie /> } />
+        <Route path= "/movie/:id" element={<PageSingleMovie /> } />
         <Route path="favorites" element={<PageFavorites />} />
         <Route path="about" element={<PageAbout />} />
-        {/* <Route path="movies/:movieId" element={<PageIndivMovie />}></Route> */}
         {/* add a Page Not Found here */}
       </Routes>
       <MobileNav />

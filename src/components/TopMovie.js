@@ -10,9 +10,11 @@ function TopMovie ({ topMovieData }) {
    
     return (
         <div className={styles.topMovie}>
-            <RatingCircle rating={topMovieData[0].vote_average} className={styles.topMovieRating} />
-            <LrgMoreInfo movie={topMovieData}/>
-            <img src={BASE_URL+SM_POSTER_SIZE+topMovieData[0].poster_path} alt={topMovieData.title} />
+            <div className={styles.topMoviePoster}>
+                <RatingCircle rating={topMovieData[0].vote_average} className={styles.topMovieRating} />
+                <LrgMoreInfo movie={topMovieData[0]}/>
+                <img src={BASE_URL+SM_POSTER_SIZE+topMovieData[0].poster_path} alt={topMovieData.title} />
+            </div>
 
             <h3>{topMovieData[0].title}</h3>
             <p className={styles.date}>{topMovieData[0].release_date}</p> 

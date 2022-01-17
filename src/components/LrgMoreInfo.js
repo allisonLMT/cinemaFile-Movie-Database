@@ -6,8 +6,8 @@ import styles from '../styles/lrgMoreInfo.module.css';
 
 function LrgMoreInfo( {movie} ) {
     return (
-        <div className={`${styles.lrgMoreInfo} ${styles.hover}`}>
-            <Link to={`/movie/${movie.id}`}>more info</Link>
+        <div>
+            <Link to={`/movie/${movie.id}`} className={`${styles.lrgMoreInfo} ${styles.hover}`}>more info</Link>
         </div>
     )
 }
