@@ -30,7 +30,7 @@ function Movies ({ moviesData }) {
                         <h3>{movie.title}</h3>
                         <div className={styles.dateHeart}>
                             <p className={styles.date}>{movie.release_date}</p>
-                            <Heart title={movie.title}/>
+                            <Heart movie={movie}/>
                         </div>
                     </div>
                 </div>
