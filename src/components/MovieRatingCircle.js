@@ -6,9 +6,9 @@ function MovieRatingCircle ({rating}) {
     
     const percent = rating * 10;
     return (
-        <div className={styles.circle}>
-            <p className={styles.percent}>{percent}%</p>
-        </div>
+            <div className={styles.circle}>
+                <p className={styles.percent}>{percent}%</p>
+            </div>
     )
 }
 

@@ -1,20 +1,8 @@
 /* heart icon */
 /* when clicked, + disappears and heart is filled orange */
 
-/* this might be best as an image rather than css */
-
-/* .heart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    height: 20px;
-    width: 20px;
-    background-color: pink;
-    color: #14213D;
-} */
 
 .heart img {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }

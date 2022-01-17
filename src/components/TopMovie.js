@@ -9,7 +9,7 @@ function TopMovie ({ topMovieData }) {
    
     return (
         <div className={styles.topMovie}>
-            <RatingCircle rating={topMovieData[0].vote_average}/>
+            <RatingCircle rating={topMovieData[0].vote_average} className={styles.topMovieRating} />
             <img src={BASE_URL+SM_POSTER_SIZE+topMovieData[0].poster_path} alt={topMovieData.title} />
             <h3>{topMovieData[0].title}</h3>
             <p className={styles.date}>{topMovieData[0].release_date}</p> 
