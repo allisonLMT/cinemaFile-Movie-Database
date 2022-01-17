@@ -5,7 +5,7 @@ import Movies from '../components/Movies';
 import { API_KEY } from '../globals/variables.js';
 
 
-function PageHome() {
+function PageHome({ sort }) {
 
     useEffect(() => {
         document.title = 'cinemaFile - Home';
@@ -13,7 +13,6 @@ function PageHome() {
 
     const [topMovieData, setTopMovieData] = useState(null);
     const [moviesData, setMovieData] = useState(null);
-    const [sort, setSort] = useState("popular");
 
     useEffect(() => {
         //gets the data for the first 13 movies, based on "popular"
@@ -43,12 +42,11 @@ function PageHome() {
                 <p>Fetching movies... </p>} 
             </section>
             <p style={{color: "#FCA311"}}>Sort By: &#9660; </p>
-            <DropDownSort onSortChange={ setSort } />
+            <DropDownSort />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
                 <p>Fetching movies... </p>}
             </section>
-            
         </div>
     );
 };

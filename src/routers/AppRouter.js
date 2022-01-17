@@ -11,7 +11,11 @@ function AppRouter() {
     <div className="App">
       <DesktopNav />
       <Routes>
-        <Route path="/" element={<PageHome />} />
+        <Route path='/' exact element={<PageHome sort='popular'/>} />
+        <Route path='/sort/popular' element={<PageHome sort='popular'/>} />
+        <Route path='/sort/top-rated' element={<PageHome sort='top_rated'/>} />
+        <Route path='/sort/now-playing' element={<PageHome sort='now_playing'/>} />
+        <Route path='/sort/upcoming'element={<PageHome sort='upcoming'/>} />
         <Route path="favorites" element={<PageFavorites />} />
         <Route path="about" element={<PageAbout />} />
         {/* <Route path="movies/:movieId" element={<PageIndivMovie />}></Route> */}
