@@ -18,23 +18,22 @@ function Movies ({ moviesData }) {
         <div className={styles.movies}>
             
             {moviesData.map(movie => 
-                <div className={styles.movie} key={movie.id}>
-                    <div className={styles.poster}>
-                        <RatingCircle rating={movie.vote_average}/>
-                        {movie.poster_path === null ?
-                            <img src={noPoster} alt="No Poster Available." /> :
-                            <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
-                        }
-                    </div>
-                    <div className={styles.belowPoster}>
-                        <h3>{movie.title}</h3>
-                        <div className={styles.dateHeart}>
-                            <p className={styles.date}>{movie.release_date}</p>
-                            <Heart movie={movie}/>
+                    <div className={styles.movie} key={movie.id}>
+                        <div className={styles.poster}>
+                            <RatingCircle rating={movie.vote_average}/>
+                            {movie.poster_path === null ?
+                                <img src={noPoster} alt="No Poster Available." /> :
+                                <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
+                            }
+                        </div>
+                        <div className={styles.belowPoster}>
+                            <h3>{movie.title}</h3>
+                            <div className={styles.dateHeart}>
+                                <p className={styles.date}>{movie.release_date}</p>
+                                <Heart movie={movie}/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
                 )} 
                 {/* end of map */}
 
