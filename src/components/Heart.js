@@ -8,6 +8,7 @@ function Heart({title}) {
 
     // needs an event listener to toggle favorite
     //useState to manage if it's in favorites or not? What heart should it show?
+    //if clicked, it needs to add the title to the local storage favorites list
 
     return (
         <div className={styles.heart}>

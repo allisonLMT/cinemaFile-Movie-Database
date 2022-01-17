@@ -19,6 +19,10 @@
 border: 1px solid yellow;
 }
 
+.poster {
+   position: relative;
+}
+
 .movie h3 {
    width: 100%;
    margin: 0.75rem 0 0;

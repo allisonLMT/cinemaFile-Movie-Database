@@ -19,7 +19,7 @@ function Movies ({ moviesData }) {
             
             {moviesData.map(movie => 
                 <div className={styles.movie} key={movie.id}>
-                    <div>
+                    <div className={styles.poster}>
                         <RatingCircle rating={movie.vote_average}/>
                         {movie.poster_path === null ?
                             <img src={noPoster} alt="No Poster Available." /> :
