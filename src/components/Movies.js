@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/movies.module.css';
 import noPoster from '../images/no-movie-poster.jpg';
 import RatingCircle from '../components/MovieRatingCircle.js';
-import Heart from '../components/Heart.js';
+import SmMoreInfo from '../components/SmMoreInfo.js';
 
 import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
 
@@ -30,7 +30,8 @@ function Movies ({ moviesData }) {
                             <h3>{movie.title}</h3>
                             <div className={styles.dateHeart}>
                                 <p className={styles.date}>{movie.release_date}</p>
-                                <Heart movie={movie}/>
+                                <SmMoreInfo movie={movie}/>
+                               
                             </div>
                         </div>
                     </div>
