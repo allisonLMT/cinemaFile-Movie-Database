@@ -1,8 +1,10 @@
 /* heart icon */
-/* when clicked, + disappears and heart is filled orange */
+
 
 
 .heart img {
     height: 25px;
     width: 25px;
 }
+
+

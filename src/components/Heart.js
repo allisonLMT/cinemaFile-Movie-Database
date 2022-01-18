@@ -8,38 +8,30 @@ import { removeFavorite, addFavorite, indexInFavorites } from '../components/Loc
 function Heart({movie}) {
 
    //useState to manage which heart to display
-    const [favorite, setFavorite] = useState(false);
-
-    useEffect(() => {
-        //find out the index, then use that to setFavorites to true or false
-        var indexInFaves = indexInFavorites(movie);
-        if (indexInFaves === -1) {
-            setFavorite(false);
-        } else {
-            setFavorite(true);
-        };
-
-    }, []);
+    const [favorite, setFavorite] = useState(indexInFavorites(movie));
     
 
     function toggleFavorite(isFav) {
         console.log("toggling favorites");
         //switch favorites to the opposite
-        setFavorite(!isFav);
+        
 
         if (isFav) {
             removeFavorite(movie);
+            setFavorite(-1);
         } else {
+            setFavorite(true);
             addFavorite(movie);
         };
     };
       
-
     return (
         <div className={styles.heart}>
-            {favorite === false ?
-                <img src={heartAdd} alt="" onClick={() => { toggleFavorite(false) } }/> :
-                <img src={heartFilled} alt="" onClick={() => {toggleFavorite(true) }}/>
+            <p>FAV is: {favorite}</p>
+            
+            {favorite === -1 ?
+                <img src={heartAdd} alt="Add to Favs" onClick={() => { toggleFavorite(false) } }/> :
+                <img src={heartFilled} alt="Remove Favs" onClick={() => {toggleFavorite(true) }}/>
             }
         </div>
     )
