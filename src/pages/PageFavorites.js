@@ -1,5 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
+import Movies from '../components/Movies.js';
+import { getFavorites } from '../components/LocalStorageFavorites.js';
 
 
 function PageFavorites() {
@@ -8,7 +10,7 @@ function PageFavorites() {
         document.title = 'cinemaFile - Favorites';
     }, []);
 
-    
+    var storedFaves = getFavorites();
 
 
 // if there are no favorites, display a message....otherwise show the favorites.
@@ -16,8 +18,8 @@ function PageFavorites() {
         <div className="page">
             <h1>Favorites</h1>
             {/* need to use a conditional similar to below to determine if there are favorites to show or not */}
-            {/* {favorites !== null ? <Movies moviesData={favorites} /> :
-                <p>You don't have any favorites yet. Visit the <link to home>homepage to add some. </p>} */}
+            {storedFaves !== null ? <Movies moviesData={storedFaves} /> :
+                <p>You don't have any favorites yet. Visit the homepage to add some. </p>}
         </div>
     );
 };
