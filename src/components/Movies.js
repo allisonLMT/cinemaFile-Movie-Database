@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/movies.module.css';
 import noPoster from '../images/no-movie-poster.jpg';
 import RatingCircle from '../components/MovieRatingCircle.js';
-import SmMoreInfo from '../components/SmMoreInfo.js';
-
+import Heart from '../components/Heart.js';
 import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
 
 
@@ -21,17 +21,18 @@ function Movies ({ moviesData }) {
                     <div className={styles.movie} key={movie.id}>
                         <div className={styles.poster}>
                             <RatingCircle rating={movie.vote_average}/>
+                            <Link to={`/movie/${movie.id}`}>
                             {movie.poster_path === null ?
                                 <img src={noPoster} alt="No Poster Available." /> :
                                 <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
                             }
+                            </Link>
                         </div>
                         <div className={styles.belowPoster}>
                             <h3>{movie.title}</h3>
                             <div className={styles.dateHeart}>
                                 <p className={styles.date}>{movie.release_date}</p>
-                                <SmMoreInfo movie={movie}/>
-                               
+                                <Heart movie={movie} />  
                             </div>
                         </div>
                     </div>

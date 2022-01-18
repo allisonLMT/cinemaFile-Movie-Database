@@ -27,7 +27,6 @@ function Heart({movie}) {
       
     return (
         <div className={styles.heart}>
-            <p>FAV is: {favorite}</p>
             
             {favorite === -1 ?
                 <img src={heartAdd} alt="Add to Favs" onClick={() => { toggleFavorite(false) } }/> :
