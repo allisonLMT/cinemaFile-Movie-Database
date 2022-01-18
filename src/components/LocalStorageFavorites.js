@@ -1,16 +1,25 @@
  //the array used to store the favorite movies before moving to local storage
  var favMovies = [];
 
+ function indexInFavorites(movie) {
+     //returns the index of the movie
+    var movieIndex = -1;
+    if(localStorage.getItem(favMovies)){
+        // parse the localStorage of favMovies, then find the index of the movie within the array     
+        // (or returns -1 if doesn't exist)
+        movieIndex = (JSON.parse(localStorage.getItem('favMovies'))).findIndex(object => {
+            return object.id === movie.id;
+        });
+    }
+    return movieIndex;
+};
+
 function addFavorite (movie) {
     console.log("adding to favorites");
     //console.log(movie)
-    
-    // parse the localStorage of favMovies, then find the index of the movie within the array     
-    // (or returns -1 if doesn't exist)
-    var movieIndex = (JSON.parse(localStorage.getItem('favMovies'))).findIndex(object => {
-        return object.id === movie.id;
-    });
 
+    var movieIndex = indexInFavorites(movie);
+    
     console.log(movieIndex)
     
     //push the movie into the array of favorite movies, if it's not already there
@@ -24,7 +33,7 @@ function addFavorite (movie) {
     
     //stringify the array and add it to local storage
     localStorage.setItem( 'favMovies' , JSON.stringify(favMovies) );
-    console.log(JSON.parse(localStorage.getItem('favMovies')))
+    console.log(JSON.parse(localStorage.getItem('favMovies')));
 }
 
 
@@ -57,4 +66,4 @@ function getFavorites() {
     return storedFaves;
 }
 
-export { favMovies, addFavorite, removeFavorite, getFavorites };
+export { addFavorite, removeFavorite, getFavorites, indexInFavorites };

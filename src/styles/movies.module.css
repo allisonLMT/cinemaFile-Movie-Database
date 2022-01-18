@@ -4,8 +4,9 @@
 /* .movies is ALL the movies */
 .movies {
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
    flex-wrap: wrap;
+   margin: 0 5%;
    color: white; 
 }
 
