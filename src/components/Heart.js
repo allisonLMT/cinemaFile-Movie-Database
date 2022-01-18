@@ -10,8 +10,6 @@ import heartFilled from '../images/icons/heartFilled.svg';
  var favMovies = [];
 
 
-    
-
 function Heart({movie}) {
 
    //useState to manage if a movie is favorited or not
