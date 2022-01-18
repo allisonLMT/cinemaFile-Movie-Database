@@ -1,0 +1,8 @@
+.movie h2, p {
+    text-align: center;
+}
+
+.movie .overview p {
+    text-align: left;
+    border: 3px solid pink;
+}

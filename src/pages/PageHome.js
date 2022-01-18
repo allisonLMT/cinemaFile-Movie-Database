@@ -25,7 +25,7 @@ function PageHome({ sort }) {
             const topMovie = moviesData.results.splice(0,1);
             const next12Movies = moviesData.results.splice(0, 12);
            
-            console.log(topMovie)
+            // console.log(topMovie)
             
             setTopMovieData(topMovie);
             setMovieData(next12Movies);

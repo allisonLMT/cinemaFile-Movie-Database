@@ -8,12 +8,7 @@ function PageFavorites() {
         document.title = 'cinemaFile - Favorites';
     }, []);
 
-    // var favMovies = [];
-    // sort the movies in the faves by title
-    // favMovies.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0))
-
-    // localStorage.setItem( 'favMovies' , JSON.stringify(favMovies) );
-    // var storedFaves = JSON.parse(localStorage.getItem('favMovies'));
+    
 
 
 // if there are no favorites, display a message....otherwise show the favorites.

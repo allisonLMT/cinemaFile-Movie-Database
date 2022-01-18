@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BASE_URL, API_KEY, SM_POSTER_SIZE } from '../globals/variables';
+import styles from '../styles/PageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
 
@@ -22,21 +23,24 @@ function PageSingleMovie() {
         getMovie();
     }, []);
 
-console.log(movie)
+//console.log(movie)
     
     return (
         <div className = "page">
             {/* conditional render of the movie info */}
             {movie !== null ?  
-                <div>
+                <div className={styles.movie}>
                     <div>
                         <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title}></img>
                         <MovieRatingCircle rating={movie.vote_average}/>
-                        <Heart />
+                        <Heart movie={movie}/>
                     </div>
-                    <h2>{movie.title}</h2>
-                    <p>{movie.release_date}</p>
-                    <p>{movie.overview}</p>
+                    <div>
+                        <h2>{movie.title}</h2>
+                        <p>{movie.release_date}</p>
+                        <p className={styles.overview}>{movie.overview}</p>
+                        {/* genre? */}
+                    </div>
                 </div>
             : <p>Fetching movie... </p>}
 
