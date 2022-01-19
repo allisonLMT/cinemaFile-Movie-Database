@@ -29,3 +29,9 @@
     right: 10px;
     border: solid 3px aqua;
 }
+
+.topMovie .heart img {
+    height: 45px;
+    width: 45px;
+    border: 3px dashed green;
+}
