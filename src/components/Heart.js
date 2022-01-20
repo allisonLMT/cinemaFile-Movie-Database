@@ -8,6 +8,7 @@ import { removeFavorite, addFavorite, indexInFavorites } from '../components/Loc
 function Heart({movie, isTopMovie}) {
 
    //useState to manage which heart to display
+   //indexInFavorites returns the index of the movie in the Favorites, if it exists
     const [favorite, setFavorite] = useState(indexInFavorites(movie));
     
 
@@ -15,7 +16,6 @@ function Heart({movie, isTopMovie}) {
         console.log("toggling favorites");
         //switch favorites to the opposite
         
-
         if (isFav) {
             removeFavorite(movie);
             setFavorite(-1);
