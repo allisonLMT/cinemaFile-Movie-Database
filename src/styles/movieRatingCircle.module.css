@@ -7,12 +7,28 @@
     position: absolute;
     top: 5px;
     right:5px;
-    height: 47px;
-    width: 47px;
+    height: 50px;
+    width: 50px;
     background-color: #14213D;
     border-radius: 50%;
     border: 2px solid #FCA311;
-    font-size: 16px;
+    font-size: 18px;
+    color: #FCA311;
+}
+
+.topRatingCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 75px;
+    width: 75px;
+    background-color: #14213D;
+    border-radius: 50%;
+    border: 3px solid #FCA311;
+    font-size: 24px;
     color: #FCA311;
 }
 

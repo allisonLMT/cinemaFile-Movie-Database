@@ -2,9 +2,16 @@
 
 
 
-.heart img {
-    height: 25px;
-    width: 25px;
+.heart {
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
 }
 
 
+.topMovieHeart {
+    height: 55px;
+    width: 55px;
+    border: 3px solid red;
+    /* need to move this to the right? and next to title? */
+}

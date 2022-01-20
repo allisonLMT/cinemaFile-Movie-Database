@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/movies.module.css';
+import ratingStyles from '../styles/movieRatingCircle.module.css';
 import noPoster from '../images/no-movie-poster.jpg';
 import RatingCircle from '../components/MovieRatingCircle.js';
 import Heart from '../components/Heart.js';
@@ -20,7 +21,7 @@ function Movies ({ moviesData }) {
             {moviesData.map(movie => 
                     <div className={styles.movie} key={movie.id}>
                         <div className={styles.poster}>
-                            <RatingCircle rating={movie.vote_average}/>
+                            <RatingCircle rating={movie.vote_average} className={ratingStyles.circle} />
                             <Link to={`/movie/${movie.id}`}>
                             {movie.poster_path === null ?
                                 <img src={noPoster} alt="No Poster Available." /> :

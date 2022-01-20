@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/heart.module.css';
 import heartAdd from '../images/icons/heartAdd.svg';
 import heartFilled from '../images/icons/heartFilled.svg';
 import { removeFavorite, addFavorite, indexInFavorites } from '../components/LocalStorageFavorites.js';
 
 
-function Heart({movie}) {
+function Heart({movie, isTopMovie}) {
 
    //useState to manage which heart to display
     const [favorite, setFavorite] = useState(indexInFavorites(movie));
@@ -26,13 +26,12 @@ function Heart({movie}) {
     };
       
     return (
-        <div className={styles.heart}>
-            
+       <div>
             {favorite === -1 ?
-                <img src={heartAdd} alt="Add to Favs" onClick={() => { toggleFavorite(false) } }/> :
-                <img src={heartFilled} alt="Remove Favs" onClick={() => {toggleFavorite(true) }}/>
+                <img src={heartAdd} alt="Add to Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => { toggleFavorite(false) } }/> :
+                <img src={heartFilled} alt="Remove Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => {toggleFavorite(true) }}/>
             }
-        </div>
+       </div>
     )
 }
 
