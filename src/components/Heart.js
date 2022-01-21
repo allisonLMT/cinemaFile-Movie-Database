@@ -5,7 +5,7 @@ import heartFilled from '../images/icons/heartFilled.svg';
 import { removeFavorite, addFavorite, indexInFavorites } from '../components/LocalStorageFavorites.js';
 
 
-function Heart({movie, isTopMovie}) {
+function Heart({movie, isTopMovie }) {
 
    //useState to manage which heart to display
    //indexInFavorites returns the index of the movie in the Favorites, if it exists
@@ -19,17 +19,21 @@ function Heart({movie, isTopMovie}) {
         if (isFav) {
             removeFavorite(movie);
             setFavorite(-1);
+            
         } else {
             setFavorite(true);
             addFavorite(movie);
         };
     };
+
+    
+
       
     return (
        <div>
             {favorite === -1 ?
                 <img src={heartAdd} alt="Add to Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => { toggleFavorite(false) } }/> :
-                <img src={heartFilled} alt="Remove Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => {toggleFavorite(true) }}/>
+                <img src={heartFilled} alt="Remove Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => {toggleFavorite(true) }} />
             }
        </div>
     )

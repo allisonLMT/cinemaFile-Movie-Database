@@ -10,13 +10,11 @@ function PageFavorites() {
         document.title = 'cinemaFile - Favorites';
     }, []);
 
-    
 
-    const [modified, setModified] = useState(false)
 
-    useEffect(( {modified} ) => {
+   
         var storedFaves = getFavorites();
-    }, [modified])
+   
 
 // if there are no favorites, display a message....otherwise show the favorites.
     return (
