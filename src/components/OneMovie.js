@@ -17,7 +17,7 @@ function OneMovie({ movie }) {
                 <RatingCircle rating={movie.vote_average} className={ratingStyles.circle} />
                 <Link to={`/movie/${movie.id}`}>
                 {movie.poster_path === null ?
-                    <img src={noPoster} alt="Movie Image Not Available" /> :
+                    <img src={noPoster} alt="Movie Poster Not Available" /> :
                     <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
                 }
                 </Link>
