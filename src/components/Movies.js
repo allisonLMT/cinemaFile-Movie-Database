@@ -12,7 +12,7 @@ function Movies ({ moviesData }) {
         <div className={styles.movies}>
             
             {moviesData.map(movie => 
-                    <OneMovie movie={movie}/>
+                    <OneMovie movie={movie} key={movie.id}/>
                 )} 
                 {/* end of map */}
 

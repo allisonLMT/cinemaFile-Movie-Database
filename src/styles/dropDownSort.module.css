@@ -1,4 +1,4 @@
-.sort {
+.expanded {
     margin-bottom: 15px;
     background-color: black;
     color: #FCA311;
@@ -6,21 +6,27 @@
 
 }
 
+.collapsed {
+    display: none;
+    border: 2px solid pink;
+}
+
 ul {
     list-style-type: none;
     padding-inline-start: 0;
 }
 
-.sort li {
+.expanded li {
     padding: 10px 0;
     border-top: 1px solid #FCA311;
     
 }
 
-.sort li:last-child {
+.expanded li:last-child {
     border-bottom: 1px solid #FCA311;
 }
-.sort a {
+.expanded a {
     text-decoration: none;
     color: #FCA311;
 }
+

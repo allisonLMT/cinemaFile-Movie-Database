@@ -40,7 +40,7 @@ function PageHome({ sort }) {
                 {topMovieData !== null ? <TopMovie topMovieData={topMovieData} /> :
                 <p>Fetching movies... </p>} 
             </section>
-            <p style={{color: "#FCA311"}}>Sort By: &#9660; </p>
+            
             <DropDownSort />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :

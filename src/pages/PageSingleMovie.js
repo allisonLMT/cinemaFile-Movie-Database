@@ -20,7 +20,11 @@ function PageSingleMovie() {
             setMovie(movieDataFromAPI);
         }
         getMovie();
+      
     }, []);
+
+
+
 
 
     
