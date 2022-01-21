@@ -10,8 +10,10 @@
 
 
 .topMovieHeart {
-    height: 55px;
-    width: 55px;
-    border: 3px solid red;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    right: 0;
+    margin-right: 10px;
     /* need to move this to the right? and next to title? */
 }
