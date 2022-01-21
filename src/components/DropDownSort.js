@@ -5,24 +5,11 @@ import styles from '../styles/dropDownSort.module.css';
 function DropDownSort () {
 
     const [isCollapsed, setIsCollapsed] = useState(true);
-
-    var menuClass = 'collapsed';
-
-    function toggleMenu(isCollapsed) {
-        if (isCollapsed) {
-            menuClass = 'expanded'
-        } else {
-            menuClass = 'collapsed'
-        };
-
-        setIsCollapsed(!isCollapsed);
-
-    }
     
     return (
         <div>
-            { isCollapsed ? <p  style={{color: '#FCA311'}}  onClick={() => { toggleMenu(isCollapsed) }} >Sort By: &#9660; </p> 
-            : <p  style={{color: '#FCA311'}} onClick={() => { toggleMenu(isCollapsed) }} >Sort By: &#9650; </p> }
+            { isCollapsed ? <p  style={{color: '#FCA311'}}  onClick={() => { setIsCollapsed(!isCollapsed) }} >Sort By: &#9660; </p> 
+            : <p  style={{color: '#FCA311'}} onClick={() => { setIsCollapsed(!isCollapsed) }} >Sort By: &#9650; </p> }
         
         <nav className={isCollapsed ? styles.collapsed : styles.expanded}>
             <ul>
