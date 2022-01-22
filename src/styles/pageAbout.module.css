@@ -1,0 +1,34 @@
+.cinemaFile,
+.TMDB {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.cinemaFile h2,
+.TMDB h2 {
+    text-align: center;
+}
+
+.cinemaFile p, 
+.TMDB p {
+    max-width: 450px;
+    padding: 0 1rem;
+}
+
+.cinemaFile img, 
+.TMDB img {
+    width: 200px;
+}
+
+.TMDB img {
+    padding: 1rem;
+}
+
+a, 
+a:visited {
+    color: white;
+    text-decoration: none;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BASE_URL, API_KEY, SM_POSTER_SIZE } from '../globals/variables';
-import styles from '../styles/PageSingleMovie.module.css';
+import styles from '../styles/pageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
 

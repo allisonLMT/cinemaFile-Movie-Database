@@ -24,12 +24,12 @@ function PageHome({ sort }) {
             //results in arrays of movie data
             //splice alters the original array, once the first movie is removed the second splice needs to start at 0 again
             const topMovie = moviesData.results.splice(0,1);
-            const next12Movies = moviesData.results.splice(0, 12);
+            const next20Movies = moviesData.results.splice(0, 20);
            
             // console.log(topMovie)
             
             setTopMovieData(topMovie);
-            setMovieData(next12Movies);
+            setMovieData(next20Movies);
         }
         fetchMovies();
     }, [sort]);
