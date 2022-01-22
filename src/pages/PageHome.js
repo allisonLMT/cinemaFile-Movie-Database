@@ -11,6 +11,7 @@ function PageHome({ sort }) {
         document.title = 'cinemaFile - Home';
     }, []);
 
+
     const [topMovieData, setTopMovieData] = useState(null);
     const [moviesData, setMovieData] = useState(null);
 
@@ -32,7 +33,8 @@ function PageHome({ sort }) {
         }
         fetchMovies();
     }, [sort]);
-    
+
+
 
     return (
         <div className="page">

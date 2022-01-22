@@ -9,7 +9,7 @@ import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
 
 
 
-function OneMovie({ movie }) {
+function OneMovie({ movie, localFaves, handleUpdateFaves }) {
 
     return (
         <div className={styles.movie} key={movie.id}>
@@ -26,7 +26,7 @@ function OneMovie({ movie }) {
                 <h3>{movie.title}</h3>
                 <div className={styles.dateHeart}>
                     <p className={styles.date}>{movie.release_date}</p>
-                    <Heart movie={movie} />  
+                    <Heart movie={movie} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves} />  
                 </div>
             </div>
         </div>
