@@ -3,12 +3,14 @@
     background-color: black;
     color: #FCA311;
     text-align: center;
-
 }
 
 .collapsed {
     display: none;
-    border: 2px solid pink;
+}
+
+.sortButton {
+    text-align: center;
 }
 
 ul {

@@ -1,11 +1,11 @@
-/* styling for each set of movie data (img, title, summary, etc.) */
-/*  */
-
 /* .movies is ALL the movies */
+
+
 .movies {
    display: flex;
-   justify-content: space-between;
+   /* justify-content: space-between; */
+   justify-content: center;
    flex-wrap: wrap;
-   margin: 0 5%;
+   /* margin: 0 5%; */
    color: white; 
 }

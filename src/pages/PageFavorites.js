@@ -19,7 +19,7 @@ function PageFavorites() {
    function handleUpdateFaves(favesFromStorage){
        console.log('running')
         setLocalFaves(favesFromStorage);
-   }
+    }
 
 
     return (

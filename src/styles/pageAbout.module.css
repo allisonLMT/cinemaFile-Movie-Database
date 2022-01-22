@@ -27,8 +27,8 @@
     padding: 1rem;
 }
 
-a, 
-a:visited {
+.TMDB a, 
+.TMDB a:visited {
     color: white;
     text-decoration: none;
 }

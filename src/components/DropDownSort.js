@@ -7,7 +7,7 @@ function DropDownSort () {
     const [isCollapsed, setIsCollapsed] = useState(true);
     
     return (
-        <div>
+        <div className={styles.sortButton}>
             { isCollapsed ? <p  style={{color: '#FCA311'}}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Sort By: &#9660; </p> 
             : <p  style={{color: '#FCA311'}} onClick={() => { setIsCollapsed(!isCollapsed)} } >Sort By: &#9650; </p> }
         
