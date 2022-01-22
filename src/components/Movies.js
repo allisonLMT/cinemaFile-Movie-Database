@@ -5,14 +5,14 @@ import styles from '../styles/movies.module.css';
 
 
 
-function Movies ({ moviesData }) {
+function Movies ({ moviesData, localFaves, handleUpdateFaves }) {
     
   
     return (
         <div className={styles.movies}>
             
             {moviesData.map(movie => 
-                    <OneMovie movie={movie} key={movie.id}/>
+                    <OneMovie movie={movie} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves} key={movie.id}/>
                 )} 
                 {/* end of map */}
 

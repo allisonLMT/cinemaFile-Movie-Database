@@ -35,7 +35,6 @@
 
 function addFavorite (movie) {
     console.log("adding to favorites");
-    //console.log(movie)
 
     var movieIndex = indexInFavorites(movie);
     
