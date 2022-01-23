@@ -42,21 +42,19 @@ function PageHome({ sort }) {
                 console.log('searchData', searchData)
                 //results in arrays of movie data
                 const splicedSearchData = searchData.results.splice(0, 20);
-
                 setMovieData(splicedSearchData);
+                if (searchData.length === 0) {
+                    sort="popular";
+                }
             }
             fetchSearchMovies();
-        };
+        }
         
     }, [searchTerm]);
 
     function handleSearchTerm(searchTerm) {
         setSearchTerm(searchTerm);
     };
-
-    if (searchTerm !== '') {
-        console.log(searchTerm)
-    }
 
     return (
         <div className="page">

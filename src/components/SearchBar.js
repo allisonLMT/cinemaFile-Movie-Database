@@ -23,7 +23,7 @@ function SearchBar ({handleSearchTerm}) {
 
     return (
         <div className={styles.search}>
-            <input type="text" placeholder="Search by Movie Title" value={input} onInput={(e) => { handleInput(e.target.value) }} />
+            <input type="text" placeholder="Search by Movie Title..." value={input} onInput={(e) => { handleInput(e.target.value) }} />
         </div>
     )
 }
