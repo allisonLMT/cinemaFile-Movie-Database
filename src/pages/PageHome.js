@@ -20,9 +20,9 @@ function PageHome({ sort }) {
             const moviesData = await res.json();
 
             //results in arrays of movie data
-            const nextMovies = moviesData.results.splice(0, 20);
+            const splicedMovies = moviesData.results.splice(0, 20);
 
-            setMovieData(nextMovies);
+            setMovieData(splicedMovies);
         }
         fetchMovies();
     }, [sort]);
