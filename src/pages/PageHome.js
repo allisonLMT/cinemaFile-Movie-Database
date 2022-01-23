@@ -12,8 +12,13 @@ function PageHome({ sort }) {
     }, []);
 
     const [moviesData, setMovieData] = useState(null);
+    //const [searchData, setSearchData] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
+        // if sort is used, then clear the searchTerm so sort will render
+        setSearchTerm('');
+
         //gets the data for the movies, based on "popular" filter
         const fetchMovies = async () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
@@ -27,11 +32,33 @@ function PageHome({ sort }) {
         fetchMovies();
     }, [sort]);
 
-  
+    useEffect(() => {
+        //gets the data for the movies, based on the searchTerm
+        if (searchTerm !== '') {
+            const fetchSearchMovies = async () => {
+                const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=1&include_adult=false`);
+                const searchData = await res.json();
+
+                console.log('searchData', searchData)
+                //results in arrays of movie data
+                const splicedSearchData = searchData.results.splice(0, 20);
+                setMovieData(splicedSearchData);
+                if (searchData.length === 0) {
+                    sort="popular";
+                }
+            }
+            fetchSearchMovies();
+        }
+        
+    }, [searchTerm]);
+
+    function handleSearchTerm(searchTerm) {
+        setSearchTerm(searchTerm);
+    };
 
     return (
         <div className="page">
-            <SearchBar />
+            <SearchBar handleSearchTerm={handleSearchTerm} />
             <DropDownSort />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
