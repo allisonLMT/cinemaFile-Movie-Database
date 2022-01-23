@@ -4,8 +4,6 @@ import styles from '../styles/searchBar.module.css';
 
 
 function SearchBar ({handleSearchTerm}) {
-
-    
     // used to hold/update the search term
     const [input, setInput] = useState('');
 
