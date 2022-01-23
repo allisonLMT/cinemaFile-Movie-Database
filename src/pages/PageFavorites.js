@@ -24,7 +24,7 @@ function PageFavorites() {
 
     return (
         <div className="page">
-            <h1>Favorites</h1>
+            <h2>Favorites</h2>
             {localFaves.length > 0 ? <Movies moviesData={localFaves} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves}/> :
                 <p>You don't have any favorites yet. Visit the homepage to add some. </p>}
         </div>

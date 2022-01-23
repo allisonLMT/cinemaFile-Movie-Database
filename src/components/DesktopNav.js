@@ -20,6 +20,7 @@ function DesktopNav () {
                     <NavLink to="/about" activestyle={{textDecoration: "underline"}} className={styles.navLink}>About</NavLink>
                 </div>
         </nav>
+        
     );
 }
 

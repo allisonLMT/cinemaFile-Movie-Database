@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SearchBar from '../components/SearchBar';
 import DropDownSort from '../components/DropDownSort';
 import Movies from '../components/Movies';
 import { API_KEY } from '../globals/variables.js';
@@ -30,6 +31,7 @@ function PageHome({ sort }) {
 
     return (
         <div className="page">
+            <SearchBar />
             <DropDownSort />
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
