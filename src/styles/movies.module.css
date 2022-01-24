@@ -3,9 +3,7 @@
 
 .movies {
    display: flex;
-   /* justify-content: space-between; */
    justify-content: center;
    flex-wrap: wrap;
-   /* margin: 0 5%; */
    color: white; 
 }

@@ -40,8 +40,8 @@ function Heart({movie, isTopMovie, handleUpdateFaves }) {
     return (
        <div>
             {favorite === -1 ?
-                <img src={heartAdd} alt="Add to Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => { toggleFavorite(false, movie) } }/> :
-                <img src={heartFilled} alt="Remove Favs" className={isTopMovie ? styles.topMovieHeart : styles.heart} onClick={() => {toggleFavorite(true, movie) }} />
+                <img src={heartAdd} alt="Add to Favs"  className={styles.heart} onClick={() => { toggleFavorite(false, movie) } }/> :
+                <img src={heartFilled} alt="Remove Favs" className={styles.heart} onClick={() => {toggleFavorite(true, movie) }} />
             }
        </div>
     )

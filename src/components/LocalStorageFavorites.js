@@ -3,18 +3,6 @@
 
  function indexInFavorites(movie) {
     //  //returns the index of the movie
-    // var movieIndex = -1;
-    // if(localStorage.getItem('favMovies')){
-    //     // parse the localStorage of favMovies, then find the index of the movie within the array     
-    //     // (or returns -1 if doesn't exist)
-    //     const itemsFromStorage = JSON.parse('favsMovies');
-    //     console.log('ITEMS_FROM_STORAGE', itemsFromStorage);
-
-    //     // movieIndex = itemsFromStorage.findIndex(object => {
-    //     //     return object.id === movie.id;
-    //     // });
-    // }
-
     let favsFromStorage = localStorage.getItem('favMovies');
 
     if(favsFromStorage === null){

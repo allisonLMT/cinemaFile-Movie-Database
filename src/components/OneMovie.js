@@ -28,6 +28,7 @@ function OneMovie({ movie, localFaves, handleUpdateFaves }) {
                     <p className={styles.date}>{movie.release_date}</p>
                     <Heart movie={movie} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves} />  
                 </div>
+                <p>{movie.overview}</p>
             </div>
         </div>
     )
