@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 5rem;
+    max-width: 300px;
+   
+}
+
+.footer p {
+    margin: 0.25rem;
+    
+}

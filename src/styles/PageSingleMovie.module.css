@@ -1,14 +1,35 @@
+.singleMovie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 6.5rem 3rem 4.6rem;
+}
+
 .movie h2,
 .movie p {
     text-align: center;
 }
 
-.singleMovie .overview p {
+p.overview  {
     text-align: left;
-    border: 3px solid pink;
 }
 
-.singleMovieHeart img {
+.singleMoviePoster {
+    display: inline-block;
+    position: relative;
+    max-width: 500px;
+    border: 2px solid pink;
+}
+
+.singleMovieInfo {
+    display: inline-block;
+    max-width: 450px;
+    border: 2px dashed greenyellow;
+}
+
+.singleMovieInfo img {
     height: 45px;
     width: 45px;
 }
+

@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
+import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
@@ -24,6 +25,7 @@ function AppRouter() {
         <Route path='*' element={<PageNotFound />} />
       </Routes>
       <MobileNav />
+      <Footer />
     </div>
   );
 }
