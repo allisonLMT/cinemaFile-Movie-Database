@@ -1,6 +1,7 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Movies from '../components/Movies.js';
+import styles from '../styles/pageFavorites.module.css';
 import { getFavorites } from '../components/LocalStorageFavorites.js';
 
 
@@ -23,11 +24,12 @@ function PageFavorites() {
 
 
     return (
-        <div className="page">
+        <div className={styles.favorites}>
             <h2>Favorites</h2>
             {localFaves.length > 0 ? <Movies moviesData={localFaves} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves}/> :
-                <p>You don't have any favorites yet. Visit the homepage to add some. </p>}
+                <p className={styles.none}>You don't have any favorites yet. Visit the <Link to="/sort/popular">homepage</Link> to add some. </p>}
         </div>
+        
     );
 };
 

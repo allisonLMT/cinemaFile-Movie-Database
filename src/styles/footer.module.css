@@ -1,13 +1,14 @@
 .footer {
+    position: relative;
+    bottom: 0; 
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 0 auto 5rem;
-    max-width: 300px;
-   
 }
 
 .footer p {
-    margin: 0.25rem;
-    
+    margin: 0.25rem
 }

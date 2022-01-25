@@ -6,14 +6,7 @@
     height: 35px;
     width: 35px;
     margin-right: 5px;
+    filter: drop-shadow(5px 5px 5px black)
 }
 
 
-.topMovieHeart {
-    position: absolute;
-    height: 45px;
-    width: 45px;
-    right: 0;
-    margin-right: 10px;
-    /* need to move this to the right? and next to title? */
-}

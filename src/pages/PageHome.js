@@ -44,7 +44,6 @@ function PageHome({ sort }) {
                 //results in arrays of movie data
                 const splicedSearchData = searchData.results.splice(0, 20);
                 setMovieData(splicedSearchData);
-             
             }
             fetchSearchMovies();
         }
@@ -54,11 +53,12 @@ function PageHome({ sort }) {
     function handleSearchTerm(searchTerm) {
         console.log('updating searchTerm')
         setSearchTerm(searchTerm);
+        //instead of setSearchTerm, can I just call a function that uses fetchSearchMovies???
     };
 
     return (
         <div className="page">
-            <SearchBar searchTerm={searchTerm} handleSearchTerm={handleSearchTerm} />
+            <SearchBar handleSearchTerm={handleSearchTerm} />
             <DropDownSort sort={sort} />
             {/* {searchTerm.length >= 0 && <p className="message">{searchTerm.length} search result(s)</p>} */}
             <section className="movies">

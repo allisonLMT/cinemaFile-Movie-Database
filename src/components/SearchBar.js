@@ -8,14 +8,12 @@ function SearchBar ({ handleSearchTerm }) {
     const [input, setInput] = useState('');
 
     function handleInput(inputValue) {
-        console.log('handling input')
-        console.log('orig input', inputValue)
-        // not sure I need to sanitize *******************
-        // const regex = /[^a-z0-9.]+/i;
-        // const sanitizedInputValue = inputValue.replace(regex, '');
-        // console.log('sanitized',inputValue)
+        
+        const regex = /[^a-z0-9.]+/i;
+        const sanitizedInputValue = inputValue.replace(regex, '');
+       
         setInput(inputValue);
-        handleSearchTerm(input);
+        handleSearchTerm(sanitizedInputValue);
     };
     
 
