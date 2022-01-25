@@ -24,8 +24,8 @@ function DropDownSort ( {sort} ) {
     
     return (
         <div className={styles.sortButton}>
-            { isCollapsed ? <p  style={{color: '#FCA311'}}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Sort By: {sortName} &#9660;</p> 
-            : <p  style={{color: '#FCA311'}} onClick={() => { setIsCollapsed(!isCollapsed)} } >Sort By: {sortName} &#9650;</p> }
+            { isCollapsed ? <p  style={{color: '#FCA311'}}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9660;</p> 
+            : <p  style={{color: '#FCA311'}} onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9650;</p> }
         
         <nav className={isCollapsed ? styles.collapsed : styles.expanded}>
             <ul>

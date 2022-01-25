@@ -4,7 +4,7 @@ import styles from '../styles/searchBar.module.css';
 
 
 function SearchBar ({ handleSearchTerm }) {
-    // used to hold/update the search term
+    // used to hold/update the search term shown in the search bar
     const [input, setInput] = useState('');
 
     function handleInput(inputValue) {
@@ -13,6 +13,8 @@ function SearchBar ({ handleSearchTerm }) {
         const sanitizedInputValue = inputValue.replace(regex, '');
        
         setInput(inputValue);
+
+        //handles the search term that is used in the actual fetching of data from the API
         handleSearchTerm(sanitizedInputValue);
     };
     
