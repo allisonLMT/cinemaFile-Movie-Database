@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import DropDownSort from '../components/DropDownSort';
 import Movies from '../components/Movies';
+import styles from '../styles/pageHome.module.css'
 import { API_KEY } from '../globals/variables.js';
 
 
@@ -13,28 +14,18 @@ function PageHome({ sort }) {
 
     const [moviesData, setMovieData] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
-   
-    // useEffect(() => {
-    //     // if sort is used, then clear the searchTerm so sort will render
-    //     setSearchTerm('');
+    const [noResults, setNoResults] = useState(false);
 
-    //     //gets the data for the movies, based on the filter
-    //     const fetchMovies = async () => {
-    //         const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
-    //         const moviesData = await res.json();
-
-    //         //results in arrays of movie data
-    //         const splicedMovies = moviesData.results.splice(0, 20);
-
-    //         setMovieData(splicedMovies);
-    //     }
-    //     fetchMovies();
-    // }, [sort]);
+    console.log(moviesData)
+    console.log(searchTerm)
+    console.log(noResults)
 
     useEffect(() => {
-        //gets the data for the movies, based on the searchTerm (if there is one)
-        //if there isn't, then it fetches based on the sort (default is "popular")
+        
+        setNoResults(false);
+
         if (searchTerm !== '') {
+            //gets the data for the movies, based on the searchTerm (if there is one)
             const fetchSearchMovies = async () => {
                 const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=1&include_adult=false`);
                 const searchData = await res.json();
@@ -45,14 +36,16 @@ function PageHome({ sort }) {
                 setMovieData(splicedSearchData);
                 console.log(moviesData)
                 if (splicedSearchData.length < 1) {
-                    console.log("no search results")
+                    console.log("no search results", noResults)
                     // set an error message here
+                    setNoResults(true);
                 }
             }
             fetchSearchMovies();
            
         } else {
             //setSearchTerm('');
+            //if there isn't, then it fetches based on the sort (default is "popular")
             const fetchMovies = async () => {
                 const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
                 const moviesData = await res.json();
@@ -70,7 +63,6 @@ function PageHome({ sort }) {
     function handleSearchTerm(searchTerm) {
        
         setSearchTerm(searchTerm);
-        //instead of setSearchTerm, can I just call a function that uses fetchSearchMovies???
     };
 
     return (
@@ -79,6 +71,9 @@ function PageHome({ sort }) {
             <SearchBar handleSearchTerm={handleSearchTerm} />
             <DropDownSort sort={sort} />
             {/* {searchTerm.length >= 0 && <p className="message">{searchTerm.length} search result(s)</p>} */}
+           
+            {noResults === true && <p className={styles.noResults}>No search results found.</p>}
+            
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
                 <p className="message" >Fetching movies...</p>}
