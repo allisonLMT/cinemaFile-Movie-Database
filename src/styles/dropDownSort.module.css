@@ -21,7 +21,6 @@ ul {
 .expanded li {
     padding: 10px 0;
     border-top: 1px solid #FCA311;
-    
 }
 
 .expanded li:last-child {

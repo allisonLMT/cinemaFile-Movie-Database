@@ -9,7 +9,7 @@
     top: 0;
     width: 100%;
   }
-  @media (min-width: 760px) {
+  @media (min-width: 850px) {
     .desktopNav {
       justify-content: space-between;
       padding-left: 25px;
@@ -52,7 +52,7 @@
   padding: 40px;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 850px) {
   .textNavMenu {
     display: flex;
   }

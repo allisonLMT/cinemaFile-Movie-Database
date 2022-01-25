@@ -12,7 +12,7 @@
     box-shadow: 0 -10px 25px black;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 850px) {
     .mobileNav {
     display: none;
     }
@@ -31,5 +31,4 @@
 .icon {
     height: 40px;
     width: 40px;
-    
 }
