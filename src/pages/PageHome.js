@@ -59,7 +59,7 @@ function PageHome({ sort }) {
     return (
         <div className="page">
             <SearchBar searchTerm={searchTerm} handleSearchTerm={handleSearchTerm} />
-            <DropDownSort />
+            <DropDownSort sort={sort} />
             {/* {searchTerm.length >= 0 && <p className="message">{searchTerm.length} search result(s)</p>} */}
             <section className="movies">
                 {moviesData !== null ? <Movies moviesData={moviesData} /> :
