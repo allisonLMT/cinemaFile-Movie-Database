@@ -1,9 +1,20 @@
 .singleMovie {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 6.5rem 3rem 4.6rem;
+    /* border: 2px dashed yellowgreen; */
+}
+
+/* add media query to change flex direct to row once big enough */
+
+.movie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid orangered; */
 }
 
 .movie h2,
@@ -19,16 +30,27 @@ p.overview  {
     display: inline-block;
     position: relative;
     max-width: 500px;
-    border: 2px solid pink;
+}
+
+.singleMoviePoster div {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: 25px;
+    top: 25px;
+    font-size: 22px;
 }
 
 .singleMovieInfo {
-    display: inline-block;
     max-width: 450px;
-    border: 2px dashed greenyellow;
+    margin-left: 3rem;
+    /* border: 2px solid aqua; */
 }
 
 .singleMovieInfo img {
+    position: absolute;
+    right: 25px;
+    top: 25px;
     height: 45px;
     width: 45px;
 }

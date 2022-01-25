@@ -23,10 +23,6 @@ function PageSingleMovie() {
       
     }, []);
 
-
-
-
-
     
     return (
         <div className = {`page ${styles.singleMovie}`}>
@@ -36,7 +32,6 @@ function PageSingleMovie() {
                     <div className={styles.singleMoviePoster}>
                         <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title}></img>
                         <MovieRatingCircle rating={movie.vote_average}/>
-                        
                     </div>
                     <div className={styles.singleMovieInfo}>
                         <Heart movie={movie} />
