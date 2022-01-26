@@ -15,10 +15,18 @@ function PageHome({ sort }) {
     const [moviesData, setMovieData] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [noResults, setNoResults] = useState(false);
+    //input for search bar
+    const [input, setInput] = useState('');
 
     console.log(moviesData)
     console.log(searchTerm)
     console.log(noResults)
+
+    function reset() {
+        setInput('')
+        setSearchTerm('')
+        setNoResults(false)
+    };
 
     useEffect(() => {
         
@@ -44,7 +52,7 @@ function PageHome({ sort }) {
             fetchSearchMovies();
            
         } else {
-            //setSearchTerm('');
+            setInput('')
             //if there isn't, then it fetches based on the sort (default is "popular")
             const fetchMovies = async () => {
                 const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
@@ -61,16 +69,18 @@ function PageHome({ sort }) {
     }, [sort, searchTerm]);
 
     function handleSearchTerm(searchTerm) {
-       
         setSearchTerm(searchTerm);
+    };
+
+    function handleSearchInput(input) {
+        setInput(input);
     };
 
     return (
         <div className="page">
              
-            <SearchBar handleSearchTerm={handleSearchTerm} />
-            <DropDownSort sort={sort} />
-            {/* {searchTerm.length >= 0 && <p className="message">{searchTerm.length} search result(s)</p>} */}
+            <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
+            <DropDownSort sort={sort} reset={reset}/>
            
             {noResults === true && <p className={styles.noResults}>No search results found.</p>}
             

@@ -34,9 +34,10 @@ function PageSingleMovie() {
                         <MovieRatingCircle rating={movie.vote_average}/>
                     </div>
                     <div className={styles.singleMovieInfo}>
-                        <Heart movie={movie} />
                         <h2>{movie.title}</h2>
-                        <p>{movie.release_date}</p>
+                        
+                        <p className={styles.date}>{movie.release_date}</p>
+                        <Heart movie={movie} />
                         <p className={styles.overview}>{movie.overview}</p>
                         {/* genre? */}
                     </div>

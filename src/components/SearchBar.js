@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../styles/searchBar.module.css';
 
 
 
-function SearchBar ({ handleSearchTerm }) {
+function SearchBar ({ handleSearchTerm, input, handleSearchInput }) {
     // used to hold/update the search term shown in the search bar
-    const [input, setInput] = useState('');
+    //const [input, setInput] = useState('');
 
     function handleInput(inputValue) {
         
         const regex = /[^a-z0-9.]+/i;
         const sanitizedInputValue = inputValue.replace(regex, '');
        
-        setInput(inputValue);
+        handleSearchInput(inputValue);
+        //setInput(inputValue);
 
         //handles the search term that is used in the actual fetching of data from the API
         handleSearchTerm(sanitizedInputValue);

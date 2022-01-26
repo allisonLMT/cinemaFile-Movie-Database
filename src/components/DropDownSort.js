@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/dropDownSort.module.css';
 
-function DropDownSort ( {sort} ) {
+function DropDownSort ( {sort, reset} ) {
 
     const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -30,16 +30,16 @@ function DropDownSort ( {sort} ) {
         <nav className={isCollapsed ? styles.collapsed : styles.expanded}>
             <ul>
                 <li>
-                    <NavLink to='/sort/popular' onClick={() => { setIsCollapsed(!isCollapsed)}} >Popular</NavLink>
+                    <NavLink to='/sort/popular' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Popular</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/top-rated' onClick={() => { setIsCollapsed(!isCollapsed)}} >Top Rated</NavLink>
+                    <NavLink to='/sort/top-rated' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Top Rated</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/now-playing' onClick={() => { setIsCollapsed(!isCollapsed)}} >Now Playing</NavLink>
+                    <NavLink to='/sort/now-playing' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Now Playing</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/upcoming' onClick={() => { setIsCollapsed(!isCollapsed)}} >Upcoming</NavLink>
+                    <NavLink to='/sort/upcoming' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Upcoming</NavLink>
                 </li>
             </ul>
         </nav>

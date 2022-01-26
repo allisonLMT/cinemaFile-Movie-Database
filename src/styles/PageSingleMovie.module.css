@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     margin: 6.5rem 3rem 4.6rem;
-    /* border: 2px dashed yellowgreen; */
 }
 
 /* add media query to change flex direct to row once big enough */
@@ -14,15 +13,19 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    /* border: 2px solid orangered; */
 }
 
-.movie h2,
+.movie h2 {
+    text-align: left;
+    padding: 1.5rem 0 0;
+}
 .movie p {
-    text-align: center;
+    text-align: left;
+    padding: 0.25rem 0;
 }
 
 p.overview  {
+    padding-top: 0.5rem;
     text-align: left;
 }
 
@@ -30,28 +33,52 @@ p.overview  {
     display: inline-block;
     position: relative;
     max-width: 500px;
-}
-
-.singleMoviePoster div {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    right: 25px;
-    top: 25px;
-    font-size: 22px;
+    filter: drop-shadow(5px 5px 5px black)
 }
 
 .singleMovieInfo {
-    max-width: 450px;
-    margin-left: 3rem;
-    /* border: 2px solid aqua; */
+    position: relative;
+    text-align: left;
+}
+
+p.date {
+    border: 2px solid magenta;
 }
 
 .singleMovieInfo img {
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    height: 45px;
-    width: 45px;
+    /* heart */
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+    display: inline;
+    position: relative;
+    
 }
+
+@media (min-width: 1120px) {
+    .singleMovieInfo {
+        max-width: 450px;
+        margin-left: 3rem;
+    }
+    .singleMovieInfo img {
+        /* heart */
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        height: 45px;
+        width: 45px;
+    }
+    .singleMoviePoster div {
+        /* Rating Circle */
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        right: 25px;
+        top: 25px;
+        font-size: 22px;
+    }
+}
+
+
+
 

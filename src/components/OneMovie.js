@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/oneMovie.module.css';
 import ratingStyles from '../styles/movieRatingCircle.module.css';
-import noPoster from '../images/movie-image-not-available.svg';
+import noPoster from '../images/movie-image-not-available.png';
 import RatingCircle from '../components/MovieRatingCircle.js';
 import Heart from '../components/Heart.js';
 import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
