@@ -15,9 +15,9 @@ function DesktopNav () {
                     </div>
                 </NavLink>
                 <div className={styles.textNavMenu}>
-                    <NavLink to="/" activestyle={{textDecoration: "underline"}} className={styles.navLink}>Home</NavLink>
-                    <NavLink to="/favorites" activestyle={{textDecoration: "underline"}} className={styles.navLink}>Favorites</NavLink>
-                    <NavLink to="/about" activestyle={{textDecoration: "underline"}} className={styles.navLink}>About</NavLink>
+                    <NavLink to="/"  className={styles.navLink}>Home</NavLink>
+                    <NavLink to="/favorites"  className={styles.navLink}>Favorites</NavLink>
+                    <NavLink to="/about"  className={styles.navLink}>About</NavLink>
                 </div>
         </nav>
         
