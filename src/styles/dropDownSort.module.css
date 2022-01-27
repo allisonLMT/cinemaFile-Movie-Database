@@ -1,16 +1,25 @@
 .expanded {
     margin-bottom: 15px;
+    position: relative;
     background-color: black;
     color: #FCA311;
     text-align: center;
+   
 }
 
 .collapsed {
     display: none;
+    position: relative;
+    
 }
 
 .sortButton {
     text-align: center;
+}
+
+.sortLabel {
+    color: #FCA311;
+    font-weight: 600;
 }
 
 ul {
@@ -26,7 +35,67 @@ ul {
 .expanded li:last-child {
     border-bottom: 1px solid #FCA311;
 }
-.expanded a {
+.expanded a,
+.collapsed a {
     text-decoration: none;
     color: #FCA311;
+    font-weight: 600;
+}
+
+
+@media (min-width: 800px) {
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 632px;
+
+    }
+    .expanded,
+    .collapsed {
+        display: flex;
+        justify-content: center;
+        background-color: #14213D;
+        margin-top: 0.5rem;
+    }
+    
+    .expanded li,
+    .collapsed li {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-right: 10px;
+        padding: 5px 0;
+        width: 130px;
+        border: 2px solid #FCA311;
+        border-radius: 5px;
+        background-color: black;
+    }
+    .expanded li:hover,
+    .collapsed li:hover {
+        border: 2px solid #FCA311;
+        border-radius: 5px;
+        background-color: #FCA311;
+        filter: drop-shadow(3px 3px 3px black);
+    }
+    
+    .expanded a:hover,
+    .collapsed a:hover {
+        color: black;
+    } 
+
+    .sortLabel {
+        display: none;
+    }
+}
+
+
+@media (min-width: 996px) {
+    ul {
+        justify-content: space-between;
+        
+
+    }
+
 }

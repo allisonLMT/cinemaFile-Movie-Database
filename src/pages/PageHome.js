@@ -6,22 +6,21 @@ import styles from '../styles/pageHome.module.css'
 import { API_KEY } from '../globals/variables.js';
 
 
+
 function PageHome({ sort }) {
 
     useEffect(() => {
         document.title = 'cinemaFile - Home';
     }, []);
-
+    // movie data for sort by list
     const [moviesData, setMovieData] = useState(null);
+    // search term (sanitized version of input)
     const [searchTerm, setSearchTerm] = useState('');
-    const [noResults, setNoResults] = useState(false);
-    //input for search bar
+    //input from search bar (displayed in bar)
     const [input, setInput] = useState('');
-
-    console.log(moviesData)
-    console.log(searchTerm)
-    console.log(noResults)
-
+    //determines conditional rendering of "No Search Results Found" message
+    const [noResults, setNoResults] = useState(false);
+ 
     function reset() {
         setInput('')
         setSearchTerm('')
@@ -78,10 +77,12 @@ function PageHome({ sort }) {
 
     return (
         <div className="page">
-             
-            <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
-            <DropDownSort sort={sort} reset={reset}/>
-           
+             <div className={styles.searchSortWrapper}>
+                 <div className={styles.searchSort}>
+                    <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
+                    <DropDownSort sort={sort} reset={reset}/>
+                </div>
+            </div>
             {noResults === true && <p className={styles.noResults}>No search results found.</p>}
             
             <section className="movies">

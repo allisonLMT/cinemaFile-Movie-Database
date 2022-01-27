@@ -2,12 +2,39 @@
     margin-top: 100px;
     display: flex;
     justify-content: center;
+   
+    /* border: 3px solid green; */
 }
 
 .search input {
-    width: 87%;
+    margin: 0 1rem;
+    width: 100%;
+    max-width: 500px;
     font-size: 1.3rem;
     padding: 5px 10px;
     border: 3px solid #FCA311;
     border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+    .search input {
+        max-width: 632px;
+    }
+}
+
+@media (min-width: 996px) {
+    .search {
+        margin: 0;
+        width: 500px;
+    }
+    .search input {
+        margin: 0;
+    }
+   
+}
+
+@media (min-width: 1328px) {
+    .search input {
+        width: 632px;
+    }
 }

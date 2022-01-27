@@ -1,10 +1,11 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/dropDownSort.module.css';
 
 function DropDownSort ( {sort, reset} ) {
 
     const [isCollapsed, setIsCollapsed] = useState(true);
+    
 
     var sortName = '';
 
@@ -21,11 +22,11 @@ function DropDownSort ( {sort, reset} ) {
         default:
             sortName = 'Popular';
     }
-    
+
     return (
         <div className={styles.sortButton}>
-            { isCollapsed ? <p  style={{color: '#FCA311'}}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9660;</p> 
-            : <p  style={{color: '#FCA311'}} onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9650;</p> }
+            { isCollapsed ? <p  className={styles.sortLabel}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9660;</p> 
+            : <p  className={styles.sortLabel} onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9650;</p> }
         
         <nav className={isCollapsed ? styles.collapsed : styles.expanded}>
             <ul>

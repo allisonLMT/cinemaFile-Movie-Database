@@ -2,3 +2,25 @@
     margin-top: 3rem;
     text-align: center;
 }
+
+@media (min-width: 996px) {
+    .searchSortWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .searchSort {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 964px;
+    }
+}
+
+
+@media (min-width: 1328px) {
+    .searchSort {
+        max-width: 1296px;
+    }
+}

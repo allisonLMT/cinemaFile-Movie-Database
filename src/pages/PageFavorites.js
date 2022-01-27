@@ -18,7 +18,6 @@ function PageFavorites() {
    console.log(localFaves)
 
    function handleUpdateFaves(favesFromStorage){
-       console.log('running')
         setLocalFaves(favesFromStorage);
     }
 
