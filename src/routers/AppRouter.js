@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import DesktopNav from '../components/DesktopNav';
-import MobileNav from '../components/MobileNav';
+//import DesktopNav from '../components/DesktopNav';
+//import MobileNav from '../components/MobileNav';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
@@ -12,7 +12,7 @@ import PageNotFound from '../pages/PageNotFound';
 function AppRouter() {
   return (
     <div className="App">
-      <DesktopNav />
+      {/* <DesktopNav /> */}
       <Routes>
         <Route path='/' exact element={<PageHome sort='popular'/>} />
         <Route path='/sort/popular' element={<PageHome sort='popular'/>} />
@@ -24,7 +24,7 @@ function AppRouter() {
         <Route path='about' element={<PageAbout />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
-      <MobileNav />
+      {/* <MobileNav /> */}
       <Footer />
     </div>
   );
