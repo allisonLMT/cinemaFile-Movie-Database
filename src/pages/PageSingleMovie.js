@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BASE_URL, API_KEY, SM_POSTER_SIZE } from '../globals/variables';
+import DesktopNav from '../components/DesktopNav';
+import MobileNav from '../components/MobileNav';
 import styles from '../styles/pageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
@@ -30,27 +32,30 @@ function PageSingleMovie() {
    
     
     return (
-        <div className = {`page ${styles.singleMovie}`}>
-            {/* conditional render of the movie info */}
-            {movie !== null ?  
-                <div className={styles.movie}>
-                    <div className={styles.singleMoviePoster}>
-                        <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title}></img>
-                        <MovieRatingCircle rating={movie.vote_average}/>
-                    </div>
-                    <div className={styles.singleMovieInfo}>
-                        <h2>{movie.title}</h2>
-                        
-                        <p className={styles.date}>{movie.release_date}</p>
-                        <Heart movie={movie} />
-                        <p className={styles.overview}>{movie.overview}</p>
-                        {/* genre? */}
-                    </div>
+        <div>
+            <DesktopNav />
+                <div className = {`page ${styles.singleMovie}`}>
+                    {/* conditional render of the movie info */}
+                    {movie !== null ?  
+                        <div className={styles.movie}>
+                            <div className={styles.singleMoviePoster}>
+                                <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title}></img>
+                                <MovieRatingCircle rating={movie.vote_average}/>
+                            </div>
+                            <div className={styles.singleMovieInfo}>
+                                <h2>{movie.title}</h2>
+                                
+                                <p className={styles.date}>{movie.release_date}</p>
+                                <Heart movie={movie} />
+                                <p className={styles.overview}>{movie.overview}</p>
+                                {/* genre? */}
+                            </div>
+                        </div>
+                    : <p>Fetching movie... </p>}
                 </div>
-            : <p>Fetching movie... </p>}
-
+            <MobileNav />
         </div>
-        // build the rest of the single movie page here
+        
     );
 };
 

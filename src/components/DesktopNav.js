@@ -5,7 +5,7 @@ import logo from '../images/orange-cinemaFile.svg';
 
 
 
-function DesktopNav () {
+function DesktopNav ({ reset }) {
     return (
         <nav className={styles.desktopNav}>
                 <NavLink to="/" className={styles.logoNavLink}>
@@ -15,7 +15,7 @@ function DesktopNav () {
                     </div>
                 </NavLink>
                 <div className={styles.textNavMenu}>
-                    <NavLink to="/"  className={styles.navLink}>Home</NavLink>
+                    <NavLink to="/"  className={styles.navLink} onClick={() => { reset() }}>Home</NavLink>
                     <NavLink to="/favorites"  className={styles.navLink}>Favorites</NavLink>
                     <NavLink to="/about"  className={styles.navLink}>About</NavLink>
                 </div>

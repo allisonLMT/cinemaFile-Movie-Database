@@ -5,11 +5,11 @@ import home from '../images/icons/homepage-blue.svg';
 import heart from '../images/icons/heart-thin-blue.svg';
 import about from '../images/icons/about-me-blue.svg';
 
-function MobileNav () {
+function MobileNav ({ reset }) {
     return (
         <nav className={styles.mobileNav}>
             <Link to="/" className={styles.link}>
-                <div className={styles.clickableArea}>
+                <div className={styles.clickableArea} onClick={() => { reset() }} >
                     <img src={home} alt="" className={styles.icon} />
                 </div>
             </Link>

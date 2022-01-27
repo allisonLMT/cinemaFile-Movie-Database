@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import DesktopNav from '../components/DesktopNav';
+import MobileNav from '../components/MobileNav';
 import SearchBar from '../components/SearchBar';
 import DropDownSort from '../components/DropDownSort';
 import Movies from '../components/Movies';
@@ -76,19 +78,23 @@ function PageHome({ sort }) {
     };
 
     return (
-        <div className="page">
-             <div className={styles.searchSortWrapper}>
-                 <div className={styles.searchSort}>
-                    <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
-                    <DropDownSort sort={sort} reset={reset}/>
+        <div>
+            <DesktopNav reset={reset}/>
+            <div className="page">
+                <div className={styles.searchSortWrapper}>
+                    <div className={styles.searchSort}>
+                        <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
+                        <DropDownSort sort={sort} reset={reset}/>
+                    </div>
                 </div>
+                {noResults === true && <p className={styles.noResults}>No search results found.</p>}
+                
+                <section className="movies">
+                    {moviesData !== null ? <Movies moviesData={moviesData} /> :
+                    <p className="message" >Fetching movies...</p>}
+                </section>
             </div>
-            {noResults === true && <p className={styles.noResults}>No search results found.</p>}
-            
-            <section className="movies">
-                {moviesData !== null ? <Movies moviesData={moviesData} /> :
-                <p className="message" >Fetching movies...</p>}
-            </section>
+            <MobileNav reset={reset}/>
         </div>
     );
 };
