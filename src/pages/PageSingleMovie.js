@@ -20,9 +20,14 @@ function PageSingleMovie() {
             setMovie(movieDataFromAPI);
         }
         getMovie();
-      
     }, []);
 
+    useEffect(() => {
+       if (movie !== null) {
+           document.title = `cinemaFile - ${movie.title}`;
+       }
+    }, [movie])
+   
     
     return (
         <div className = {`page ${styles.singleMovie}`}>

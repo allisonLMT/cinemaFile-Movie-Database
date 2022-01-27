@@ -39,12 +39,12 @@ function PageHome({ sort }) {
                
                 //results in arrays of movie data
                 const splicedSearchData = searchData.results.splice(0, 20);
-                console.log(splicedSearchData)
+                //console.log(splicedSearchData)
                 setMovieData(splicedSearchData);
-                console.log(moviesData)
+                //console.log(moviesData)
                 if (splicedSearchData.length < 1) {
-                    console.log("no search results", noResults)
-                    // set an error message here
+                    //console.log("no search results", noResults)
+                    // set an error message
                     setNoResults(true);
                 }
             }

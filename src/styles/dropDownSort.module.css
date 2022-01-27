@@ -94,8 +94,5 @@ ul {
 @media (min-width: 996px) {
     ul {
         justify-content: space-between;
-        
-
     }
-
 }
