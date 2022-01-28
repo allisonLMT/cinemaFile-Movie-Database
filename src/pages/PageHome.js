@@ -79,7 +79,7 @@ function PageHome({ sort }) {
 
     return (
         <div>
-            <DesktopNav reset={reset}/>
+            <DesktopNav reset={reset} origin="home"/>
             <div className="page">
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>
@@ -94,7 +94,7 @@ function PageHome({ sort }) {
                     <p className="message" >Fetching movies...</p>}
                 </section>
             </div>
-            <MobileNav reset={reset}/>
+            <MobileNav reset={reset} origin="home" />
         </div>
     );
 };

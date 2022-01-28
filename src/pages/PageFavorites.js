@@ -17,7 +17,7 @@ function PageFavorites() {
     var storedFaves = getFavorites();
    
    const [localFaves, setLocalFaves] = useState(storedFaves); 
-   console.log(localFaves)
+  
 
    function handleUpdateFaves(favesFromStorage){
         setLocalFaves(favesFromStorage);

@@ -14,9 +14,8 @@ function Heart({movie, isTopMovie, handleUpdateFaves }) {
     function toggleFavorite(isFav, movie) {
 
         console.log("toggling favorites");
+        
         //switch favorites to the opposite
-       
-
         if (isFav) { 
             removeFavorite(movie);
             setFavorite(-1);
@@ -35,8 +34,6 @@ function Heart({movie, isTopMovie, handleUpdateFaves }) {
     };
 
     
-
-      
     return (
        <div>
             {favorite === -1 ?
