@@ -23,12 +23,12 @@ function OneMovie({ movie, localFaves, handleUpdateFaves }) {
                 </Link>
             </div>
             <div className={styles.belowPoster}>
-                <h3>{movie.title}</h3>
+                <h3 className={styles.title}>{movie.title}</h3>
                 <div className={styles.dateHeart}>
                     <p className={styles.date}>{movie.release_date}</p>
                     <Heart movie={movie} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves} />  
                 </div>
-                <p>{movie.overview}</p>
+                <p className={styles.overview}>{movie.overview}</p>
             </div>
         </div>
     )

@@ -30,6 +30,7 @@ function PageSingleMovie() {
        }
     }, [movie])
    
+    console.log(movie)
     
     return (
         <div>
@@ -48,7 +49,11 @@ function PageSingleMovie() {
                                 <p className={styles.date}>{movie.release_date}</p>
                                 <Heart movie={movie} />
                                 <p className={styles.overview}>{movie.overview}</p>
-                                {/* genre? */}
+                                <h3>Runtime: </h3><p>{movie.runtime} minutes</p>
+
+                                <h3>Genres: </h3>
+                                {movie.genres.map(genre => <p className={`${styles.inline} ${styles.genres}`} key={genre.id}>{genre.name}</p>)}
+
                             </div>
                         </div>
                     : <p>Fetching movie... </p>}

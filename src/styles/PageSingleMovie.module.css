@@ -39,11 +39,14 @@ p.overview  {
 .singleMovieInfo {
     position: relative;
     text-align: left;
+    width: 100%;
+    max-width: 500px;
+   
 }
 
-p.date {
+/* p.date {
     border: 2px solid magenta;
-}
+} */
 
 .singleMovieInfo img {
     /* heart */
@@ -52,7 +55,17 @@ p.date {
     top: 0; */
     display: inline;
     position: relative;
-    
+}
+
+p.inline {
+    display: inline;
+}
+
+p.genres:after {
+    content: ', ';
+}
+p.genres:last-child:after {
+    content: '';
 }
 
 @media (min-width: 1120px) {

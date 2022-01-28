@@ -4,7 +4,6 @@
     background-color: black;
     color: #FCA311;
     text-align: center;
-   
 }
 
 .collapsed {
@@ -50,8 +49,8 @@ ul {
         justify-content: space-between;
         width: 100%;
         max-width: 632px;
-
     }
+    
     .expanded,
     .collapsed {
         display: flex;
