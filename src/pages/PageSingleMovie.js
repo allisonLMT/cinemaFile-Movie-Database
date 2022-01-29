@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { BASE_URL, API_KEY, SM_POSTER_SIZE } from '../globals/variables';
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
+import Footer from '../components/Footer';
 import styles from '../styles/pageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
@@ -33,9 +34,9 @@ function PageSingleMovie() {
     console.log(movie)
     
     return (
-        <div>
+        <div className='page-container'>
             <DesktopNav />
-                <div className = {`page ${styles.singleMovie}`}>
+                <div className = {`content-wrap ${styles.singleMovie}`}>
                     {/* conditional render of the movie info */}
                     {movie !== null ?  
                         <div className={styles.movie}>
@@ -45,9 +46,11 @@ function PageSingleMovie() {
                             </div>
                             <div className={styles.singleMovieInfo}>
                                 <h2>{movie.title}</h2>
-                                
-                                <p className={styles.date}>{movie.release_date}</p>
-                                <Heart movie={movie} />
+                                <div className={styles.dateHeart}>
+                                    <p className={styles.date}>{movie.release_date}</p>
+                                    <Heart movie={movie} />
+                                </div>
+                                <h3>Overview:</h3>
                                 <p className={styles.overview}>{movie.overview}</p>
                                 <h3>Runtime: </h3><p>{movie.runtime} minutes</p>
 
@@ -58,6 +61,7 @@ function PageSingleMovie() {
                         </div>
                     : <p>Fetching movie... </p>}
                 </div>
+            <Footer />
             <MobileNav />
         </div>
         

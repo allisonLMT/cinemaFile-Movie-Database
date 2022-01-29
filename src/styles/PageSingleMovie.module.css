@@ -3,10 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 6.5rem 3rem 4.6rem;
+    margin: 6.5rem 1.5rem 4.6rem;
 }
-
-/* add media query to change flex direct to row once big enough */
 
 .movie {
     display: flex;
@@ -21,7 +19,7 @@
 }
 .movie p {
     text-align: left;
-    padding: 0.25rem 0;
+    margin: 0.5rem 0;
 }
 
 p.overview  {
@@ -33,7 +31,12 @@ p.overview  {
     display: inline-block;
     position: relative;
     max-width: 500px;
-    filter: drop-shadow(5px 5px 5px black)
+    filter: drop-shadow(7px 7px 7px black)
+}
+
+.singleMovie h3 {
+    color: #FCA311;
+    margin-bottom: 0.5rem;
 }
 
 .singleMovieInfo {
@@ -41,20 +44,13 @@ p.overview  {
     text-align: left;
     width: 100%;
     max-width: 500px;
-   
 }
 
-/* p.date {
-    border: 2px solid magenta;
-} */
-
-.singleMovieInfo img {
-    /* heart */
-    /* position: absolute;
-    right: 0;
-    top: 0; */
-    display: inline;
-    position: relative;
+.dateHeart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 p.inline {

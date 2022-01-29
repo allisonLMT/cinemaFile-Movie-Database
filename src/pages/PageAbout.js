@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
+import Footer from '../components/Footer';
 import styles from '../styles/pageAbout.module.css';
 import logo from '../images/orange-cinemaFile.svg';
 import tmdbLogo from '../images/the-movie-database.svg';
@@ -14,9 +15,9 @@ function PageAbout() {
     }, []);
 
     return (
-        <div>
+        <div className='page-container'>
             <DesktopNav />
-                <div className="page">
+                <div className='content-wrap'>
                     <section className={styles.cinemaFile}>
                         <img src={logo} alt="cinemaFile logo" />
                         <div>
@@ -34,6 +35,7 @@ function PageAbout() {
                         
                     </section>
                 </div>
+                <Footer />
             <MobileNav />
         </div>
     );

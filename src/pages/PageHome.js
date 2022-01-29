@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
+import Footer from '../components/Footer';
 import SearchBar from '../components/SearchBar';
 import DropDownSort from '../components/DropDownSort';
 import Movies from '../components/Movies';
@@ -78,9 +79,9 @@ function PageHome({ sort }) {
     };
 
     return (
-        <div>
+        <div className='page-container'>
             <DesktopNav reset={reset} origin="home"/>
-            <div className="page">
+            <div className="content-wrap">
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>
                         <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
@@ -94,6 +95,7 @@ function PageHome({ sort }) {
                     <p className="message" >Fetching movies...</p>}
                 </section>
             </div>
+            <Footer />
             <MobileNav reset={reset} origin="home" />
         </div>
     );

@@ -9,7 +9,7 @@
 .collapsed {
     display: none;
     position: relative;
-    
+    margin-bottom: 15px;
 }
 
 .sortButton {
@@ -26,12 +26,14 @@ ul {
     padding-inline-start: 0;
 }
 
-.expanded li {
+.expanded a,
+.collapsed a {
+    display: block;
     padding: 10px 0;
     border-top: 1px solid #FCA311;
 }
 
-.expanded li:last-child {
+.expanded a:last-child {
     border-bottom: 1px solid #FCA311;
 }
 .expanded a,
@@ -58,9 +60,9 @@ ul {
         background-color: #14213D;
         margin-top: 0.5rem;
     }
-    
-    .expanded li,
-    .collapsed li {
+    /* here */
+    .expanded a,
+    .collapsed a {
         display: flex;
         justify-content: center;
         align-content: center;
@@ -71,11 +73,13 @@ ul {
         border-radius: 5px;
         background-color: black;
     }
-    .expanded li:hover,
-    .collapsed li:hover {
+    /* here */
+    .expanded a:hover,
+    .collapsed a:hover {
         border: 2px solid #FCA311;
         border-radius: 5px;
         background-color: #FCA311;
+        color: black;
         filter: drop-shadow(3px 3px 3px black);
     }
     
