@@ -7,6 +7,7 @@ import styles from '../styles/pageNotFound.module.css';
 
 function PageNotFound () {
     console.log("not found")
+    window.scrollTo(0, 0)
     return (
         <div className='page-container'>
             <DesktopNav />

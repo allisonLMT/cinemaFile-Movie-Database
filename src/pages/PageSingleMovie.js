@@ -11,7 +11,7 @@ import MovieRatingCircle from '../components/MovieRatingCircle';
 
 
 function PageSingleMovie() {
-
+    window.scrollTo(0, 0)
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
 

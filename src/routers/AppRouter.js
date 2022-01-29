@@ -5,13 +5,11 @@ import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
 import PageNotFound from '../pages/PageNotFound';
-import ScrollToTop from '../components/ScrollToTop';
-
 
 function AppRouter() {
+
   return (
     <div className="App">
-        {/* <ScrollToTop> */}
           <Routes>
             <Route path='/' exact element={<PageHome sort='popular'/>} />
             <Route path='/sort/popular' element={<PageHome sort='popular'/>} />
@@ -23,7 +21,6 @@ function AppRouter() {
             <Route path='about' element={<PageAbout />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
-        {/* </ScrollToTop> */}
     </div>
   );
 }

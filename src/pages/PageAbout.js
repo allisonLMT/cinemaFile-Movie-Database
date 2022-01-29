@@ -9,7 +9,7 @@ import tmdbLogo from '../images/the-movie-database.svg';
 
 
 function PageAbout() {
-
+    window.scrollTo(0, 0)
     useEffect(() => {
         document.title = 'cinemaFile - About';
     }, []);

@@ -11,7 +11,7 @@ import { API_KEY } from '../globals/variables.js';
 
 
 function PageHome({ sort }) {
-
+    window.scrollTo(0, 0)
     useEffect(() => {
         document.title = 'cinemaFile - Home';
     }, []);
