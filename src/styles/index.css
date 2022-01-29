@@ -11,10 +11,10 @@ body {
 }
 .page-container {
   position: relative;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 175px);
 }
 .content-wrap {
-  margin: 100px auto 60px;
+  margin: 100px auto 70px;
   padding-bottom: 70px;
 }
 
