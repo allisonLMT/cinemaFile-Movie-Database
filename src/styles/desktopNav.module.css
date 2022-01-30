@@ -50,55 +50,38 @@
   text-decoration: none;
 }
 
-/* .navLink {
-  padding: 40px;
-} */
-
 a.currentPage {
   padding: 40px;
-  border: 2px solid green;
+  text-decoration: underline;
 }
 
 a.notCurrentPage {
   padding: 40px;
-  border: 2px solid red;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 850px) {
   .textNavMenu {
     display: flex;
   }
-  .currentPage,
-  .notCurrentPage {
+}
+@media (min-width: 975px) {
+  a.currentPage,
+  a.notCurrentPage {
     padding: 40px 60px;
   }
-  /* .navLink {
-    padding: 40px 60px;
-  } */
 }
 
-.currentPage:visited,
-.notCurrentPage:visited,
-.currentPage:focus,
-.notCurrentPage:focus,
-.currentPage:hover,
-.notCurrentPage:hover,
-.currentPage:active,
-.notCurrentPage:active {
+a.currentPage:visited,
+a.notCurrentPage:visited,
+a.currentPage:focus,
+a.notCurrentPage:focus,
+a.currentPage:hover,
+a.notCurrentPage:hover,
+a.currentPage:active,
+a.notCurrentPage:active {
   color: #FCA311;
   text-decoration: none;
 }
-
-/* .navLink,
-.navLink:visited {
-  color: #FCA311;
-  text-decoration: none;
-}
-
-.navLink:focus,
-.navLink:hover,
-.navLink:active {
-  color: #FCA311;
-  text-decoration: underline;
-} */
 
