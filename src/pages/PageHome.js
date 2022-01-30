@@ -10,7 +10,7 @@ import { API_KEY } from '../globals/variables.js';
 
 
 
-function PageHome({ sort }) {
+function PageHome({ sort, isCurrentPage, handleCurrentPage }) {
 
     window.scrollTo(0, 0)
     
@@ -95,7 +95,7 @@ function PageHome({ sort }) {
 
     return (
         <div className='page-container'>
-            <DesktopNav reset={reset} origin="home"/>
+            <DesktopNav reset={reset} origin="home" isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
             <div className="content-wrap">
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>

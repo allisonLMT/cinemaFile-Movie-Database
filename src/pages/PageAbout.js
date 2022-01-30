@@ -8,7 +8,7 @@ import logo from '../images/orange-cinemaFile.svg';
 import tmdbLogo from '../images/the-movie-database.svg';
 
 
-function PageAbout() {
+function PageAbout( isCurrentPage, handleCurrentPage ) {
     window.scrollTo(0, 0)
     useEffect(() => {
         document.title = 'cinemaFile - About';
@@ -16,7 +16,7 @@ function PageAbout() {
 
     return (
         <div className='page-container'>
-            <DesktopNav />
+            <DesktopNav isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
                 <div className='content-wrap'>
                     <section className={styles.cinemaFile}>
                         <img src={logo} alt="cinemaFile logo" />

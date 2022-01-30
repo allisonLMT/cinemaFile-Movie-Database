@@ -8,8 +8,10 @@ import styles from '../styles/pageFavorites.module.css';
 import { getFavorites } from '../components/LocalStorageFavorites.js';
 
 
-function PageFavorites() {
-    window.scrollTo(0, 0)
+function PageFavorites( isCurrentPage, handleCurrentPage ) {
+
+    window.scrollTo(0, 0);
+
     useEffect(() => {
         document.title = 'cinemaFile - Favorites';
     }, []);
@@ -25,7 +27,7 @@ function PageFavorites() {
 
     return (
         <div className='page-container'>
-            <DesktopNav />
+            <DesktopNav isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
             <div className='content-wrap'>
                 <div className={styles.favorites}>
                     <h2>Favorites</h2>

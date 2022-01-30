@@ -5,11 +5,11 @@ import Footer from '../components/Footer';
 import styles from '../styles/pageNotFound.module.css';
 
 
-function PageNotFound () {
+function PageNotFound ( isCurrentPage, handleCurrentPage ) {
    
     return (
         <div className='page-container'>
-            <DesktopNav />
+            <DesktopNav isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
                 <div className='content-wrap'>
                     <h2 className={styles.notFound}>404 Error</h2>
                     <h3 className={styles.notFound}>Page not found.</h3>

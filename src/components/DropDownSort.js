@@ -6,7 +6,6 @@ function DropDownSort ( {sortState, handleSortState, reset} ) {
 
     const [isCollapsed, setIsCollapsed] = useState(true);
     
-
     var sortName = '';
 
     // used to set the text on the drownDownSort menu
@@ -27,8 +26,7 @@ function DropDownSort ( {sortState, handleSortState, reset} ) {
             sortName = 'Popular';
     }
 
-    // conditional render on NavLink {`${sortState} === 'popular' ? className=${styles.active} : className=${styles.inactive}`}
-    // className = { sortState === 'popular' ? styles.active : styles.inactive }
+   
     return (
         <div className={styles.sortButton}>
             { isCollapsed ? <p  className={styles.sortLabel}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9660;</p> 
@@ -45,17 +43,20 @@ function DropDownSort ( {sortState, handleSortState, reset} ) {
                 <li>
                     <NavLink to='/sort/top-rated' 
                     className = { sortState === 'top_rated' ? styles.active : styles.inactive }
-                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('top_rated') }} >Top Rated</NavLink>
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('top_rated') }} 
+                    >Top Rated</NavLink>
                 </li>
                 <li>
                     <NavLink to='/sort/now-playing' 
                     className = { sortState === 'now_playing' ? styles.active : styles.inactive }
-                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('now_playing') }} >Now Playing</NavLink>
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('now_playing') }} 
+                    >Now Playing</NavLink>
                 </li>
                 <li>
                     <NavLink to='/sort/upcoming' 
                     className = { sortState === 'upcoming' ? styles.active : styles.inactive }
-                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('upcoming') }} >Upcoming</NavLink>
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('upcoming') }} 
+                    >Upcoming</NavLink>
                 </li>
             </ul>
         </nav>
