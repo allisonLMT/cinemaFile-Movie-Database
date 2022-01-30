@@ -14,21 +14,29 @@ function MobileNav ({ pageName, reset }) {
             <NavLink to="/" className={styles.link}>
                 {pageName === "home" ?
                     <div className={styles.clickableArea} onClick={() => { reset() }} > 
-                         <img src={home} alt="" className={styles.icon} />
+                        <div className = {pageName === 'home' ? styles.currentPage : styles.notCurrentPage}>
+                            <img src={home} alt="" className={styles.icon} />
+                        </div>
                     </div> :
                     <div className={styles.clickableArea} > 
-                        <img src={home} alt="" className={styles.icon} />
+                        <div className = {pageName === 'home' ? styles.currentPage : styles.notCurrentPage}>    
+                            <img src={home} alt="" className={styles.icon} />
+                        </div>
                     </div>
                 }    
             </NavLink>
             <NavLink to="/favorites" className={styles.link}>
                 <div className={styles.clickableArea}>
-                    <img src={heart} alt="" className={styles.icon} />
+                    <div className = {pageName === 'favorites' ? styles.currentPage : styles.notCurrentPage}>
+                        <img src={heart} alt="" className={styles.icon} />
+                    </div>
                 </div>
             </NavLink>
             <NavLink to="/about" className={styles.link}>
                 <div className={styles.clickableArea}>
-                    <img src={about} alt="" className={styles.icon} />
+                    <div className = {pageName === 'about' ? styles.currentPage : styles.notCurrentPage}>
+                        <img src={about} alt="" className={styles.icon} />
+                    </div>
                 </div>
             </NavLink>
         </nav>
