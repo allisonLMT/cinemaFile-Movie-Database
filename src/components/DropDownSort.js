@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/dropDownSort.module.css';
 
-function DropDownSort ( {sort, reset} ) {
+function DropDownSort ( {sortState, handleSortState, reset} ) {
 
     const [isCollapsed, setIsCollapsed] = useState(true);
     
 
     var sortName = '';
 
-    switch(sort) {
+    // used to set the text on the drownDownSort menu
+    switch(sortState) {
+        case 'search':
+            sortName = '';
+            break;
         case 'top_rated':
             sortName = 'Top Rated';
             break;
@@ -23,6 +27,8 @@ function DropDownSort ( {sort, reset} ) {
             sortName = 'Popular';
     }
 
+    // conditional render on NavLink {`${sortState} === 'popular' ? className=${styles.active} : className=${styles.inactive}`}
+    // className = { sortState === 'popular' ? styles.active : styles.inactive }
     return (
         <div className={styles.sortButton}>
             { isCollapsed ? <p  className={styles.sortLabel}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9660;</p> 
@@ -31,16 +37,25 @@ function DropDownSort ( {sort, reset} ) {
         <nav className={isCollapsed ? styles.collapsed : styles.expanded}>
             <ul>
                 <li>
-                    <NavLink to='/sort/popular' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Popular</NavLink>
+                    <NavLink to='/sort/popular'
+                    className = { sortState === 'popular' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('popular') }} 
+                    >Popular</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/top-rated' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Top Rated</NavLink>
+                    <NavLink to='/sort/top-rated' 
+                    className = { sortState === 'top_rated' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('top_rated') }} >Top Rated</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/now-playing' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Now Playing</NavLink>
+                    <NavLink to='/sort/now-playing' 
+                    className = { sortState === 'now_playing' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('now_playing') }} >Now Playing</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/upcoming' onClick={() => { setIsCollapsed(!isCollapsed); reset() }} >Upcoming</NavLink>
+                    <NavLink to='/sort/upcoming' 
+                    className = { sortState === 'upcoming' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('upcoming') }} >Upcoming</NavLink>
                 </li>
             </ul>
         </nav>

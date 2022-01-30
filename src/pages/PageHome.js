@@ -11,10 +11,13 @@ import { API_KEY } from '../globals/variables.js';
 
 
 function PageHome({ sort }) {
+
     window.scrollTo(0, 0)
+    
     useEffect(() => {
         document.title = 'cinemaFile - Home';
     }, []);
+    
     // movie data for sort by list
     const [moviesData, setMovieData] = useState(null);
     // search term (sanitized version of input)
@@ -23,11 +26,14 @@ function PageHome({ sort }) {
     const [input, setInput] = useState('');
     //determines conditional rendering of "No Search Results Found" message
     const [noResults, setNoResults] = useState(false);
+    //passed to DropDownSort and used for conditional rendering of sort buttons
+    const [sortState, setSortState] = useState(sort);
  
     function reset() {
-        setInput('')
-        setSearchTerm('')
-        setNoResults(false)
+        setSortState('popular');
+        setInput('');
+        setSearchTerm('');
+        setNoResults(false);
     };
 
     useEffect(() => {
@@ -35,6 +41,7 @@ function PageHome({ sort }) {
         setNoResults(false);
 
         if (searchTerm !== '') {
+            setSortState('search');
             //gets the data for the movies, based on the searchTerm (if there is one)
             const fetchSearchMovies = async () => {
                 const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=1&include_adult=false`);
@@ -55,7 +62,11 @@ function PageHome({ sort }) {
            
         } else {
             setInput('')
-            //if there isn't, then it fetches based on the sort (default is "popular")
+            //if the search term was deleted, then the display goes back to the default ('popular')
+            if (sortState === 'search' && searchTerm === '') {
+                setSortState('popular');
+                sort = 'popular';
+            };
             const fetchMovies = async () => {
                 const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
                 const moviesData = await res.json();
@@ -78,6 +89,10 @@ function PageHome({ sort }) {
         setInput(input);
     };
 
+    function handleSortState(sort) {
+        setSortState(sort);
+    }
+
     return (
         <div className='page-container'>
             <DesktopNav reset={reset} origin="home"/>
@@ -85,7 +100,7 @@ function PageHome({ sort }) {
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>
                         <SearchBar handleSearchTerm={handleSearchTerm} input={input} handleSearchInput={handleSearchInput} />
-                        <DropDownSort sort={sort} reset={reset}/>
+                        <DropDownSort sortState={sortState} handleSortState={handleSortState} reset={reset}/>
                     </div>
                 </div>
                 {noResults === true && <p className={styles.noResults}>No search results found.</p>}

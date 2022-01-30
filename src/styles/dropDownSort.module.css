@@ -60,9 +60,8 @@ ul {
         background-color: #14213D;
         margin-top: 0.5rem;
     }
-    /* here */
-    .expanded a,
-    .collapsed a {
+ 
+    a.inactive {
         display: flex;
         justify-content: center;
         align-content: center;
@@ -73,9 +72,14 @@ ul {
         border-radius: 5px;
         background-color: black;
     }
-    /* here */
-    .expanded a:hover,
-    .collapsed a:hover {
+    
+    a.active {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-right: 10px;
+        padding: 5px 0;
+        width: 130px;
         border: 2px solid #FCA311;
         border-radius: 5px;
         background-color: #FCA311;
