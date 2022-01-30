@@ -12,7 +12,7 @@ import { API_KEY } from '../globals/variables.js';
 
 function PageHome({ sort }) {
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     
     useEffect(() => {
         document.title = 'cinemaFile - Home';
@@ -95,7 +95,7 @@ function PageHome({ sort }) {
 
     return (
         <div className='page-container'>
-            <DesktopNav reset={reset} origin="home"/>
+            <DesktopNav reset={reset} pageName='home'/>
             <div className="content-wrap">
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>

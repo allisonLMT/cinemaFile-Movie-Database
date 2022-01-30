@@ -6,10 +6,11 @@ import styles from '../styles/pageNotFound.module.css';
 
 
 function PageNotFound () {
+
    
     return (
         <div className='page-container'>
-            <DesktopNav />
+            <DesktopNav pageName='notFound' />
                 <div className='content-wrap'>
                     <h2 className={styles.notFound}>404 Error</h2>
                     <h3 className={styles.notFound}>Page not found.</h3>

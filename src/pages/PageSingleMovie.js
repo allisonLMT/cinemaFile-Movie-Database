@@ -11,7 +11,9 @@ import MovieRatingCircle from '../components/MovieRatingCircle';
 
 
 function PageSingleMovie() {
-    window.scrollTo(0, 0)
+    
+    window.scrollTo(0, 0);
+
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
 
@@ -35,7 +37,7 @@ function PageSingleMovie() {
     
     return (
         <div className='page-container'>
-            <DesktopNav />
+            <DesktopNav pageName='single'/>
                 <div className = {`content-wrap ${styles.singleMovie}`}>
                     {/* conditional render of the movie info */}
                     {movie !== null ?  

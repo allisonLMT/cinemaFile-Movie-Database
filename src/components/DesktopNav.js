@@ -5,12 +5,12 @@ import logo from '../images/orange-cinemaFile.svg';
 
 
 
-function DesktopNav ({ origin, reset }) {
-    
+function DesktopNav ({ reset, pageName }) {
+
     return (
         <nav className={styles.desktopNav}>
                 <NavLink to="/" className={styles.logoNavLink}>
-                    {origin === "home" ?
+                    {pageName === "home" ?
                     <div className={styles.navLogos} onClick={() => { reset() }} >
                         <img src={logo} alt="" className={styles.logo}/>
                         <h1 className={styles.logoText}>cinemaFile</h1>
@@ -22,12 +22,21 @@ function DesktopNav ({ origin, reset }) {
                     }
                 </NavLink>
                 <div className={styles.textNavMenu}>
-                    { origin === "home" ?
-                        <NavLink to="/"  className={styles.navLink} onClick={() => { reset() }}>Home</NavLink> :    
-                        <NavLink to="/"  className={styles.navLink} >Home</NavLink>
+                    { pageName === "home" ?
+                        <NavLink to="/"  
+                            className = {pageName === 'home' ? styles.currentPage : styles.notCurrentPage } 
+                            onClick={() => { reset() }}
+                            >Home</NavLink> :    
+                        <NavLink to="/"  
+                            className = {pageName === 'home' ? styles.currentPage : styles.notCurrentPage }  
+                            >Home</NavLink>
                     }
-                    <NavLink to="/favorites"  className={styles.navLink}>Favorites</NavLink>
-                    <NavLink to="/about"  className={styles.navLink}>About</NavLink>
+                    <NavLink to="/favorites"   
+                        className = {pageName === 'favorites' ? styles.currentPage : styles.notCurrentPage } 
+                        >Favorites</NavLink>
+                    <NavLink to="/about"  
+                        className = {pageName === 'about' ? styles.currentPage : styles.notCurrentPage } 
+                        >About</NavLink>
                 </div>
         </nav>
         

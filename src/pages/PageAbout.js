@@ -8,15 +8,18 @@ import logo from '../images/orange-cinemaFile.svg';
 import tmdbLogo from '../images/the-movie-database.svg';
 
 
+
 function PageAbout() {
+    
     window.scrollTo(0, 0)
+    
     useEffect(() => {
         document.title = 'cinemaFile - About';
     }, []);
 
     return (
         <div className='page-container'>
-            <DesktopNav />
+            <DesktopNav pageName='about' />
                 <div className='content-wrap'>
                     <section className={styles.cinemaFile}>
                         <img src={logo} alt="cinemaFile logo" />
