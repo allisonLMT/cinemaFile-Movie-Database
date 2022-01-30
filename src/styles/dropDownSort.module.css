@@ -61,8 +61,6 @@ ul {
         margin-top: 0.5rem;
     }
  
-    /* .expanded a,
-    .collapsed a, */
     a.inactive {
         display: flex;
         justify-content: center;
@@ -75,9 +73,13 @@ ul {
         background-color: black;
     }
     
-    /* .expanded a:hover,
-    .collapsed a:hover  */
     a.active {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-right: 10px;
+        padding: 5px 0;
+        width: 130px;
         border: 2px solid #FCA311;
         border-radius: 5px;
         background-color: #FCA311;
