@@ -6,14 +6,13 @@ import Footer from '../components/Footer';
 import styles from '../styles/pageAbout.module.css';
 import logo from '../images/orange-cinemaFile.svg';
 import tmdbLogo from '../images/the-movie-database.svg';
-//import { handleCurrentPage } from '../components/CurrentPage';
+
 
 
 function PageAbout() {
     
     window.scrollTo(0, 0)
-    //handleCurrentPage('about');
-
+    
     useEffect(() => {
         document.title = 'cinemaFile - About';
     }, []);

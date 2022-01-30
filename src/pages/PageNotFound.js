@@ -3,12 +3,10 @@ import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 import Footer from '../components/Footer';
 import styles from '../styles/pageNotFound.module.css';
-//import { handleCurrentPage } from '../components/CurrentPage';
 
 
 function PageNotFound () {
 
-    //handleCurrentPage('notFound');
    
     return (
         <div className='page-container'>

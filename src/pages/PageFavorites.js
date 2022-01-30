@@ -6,13 +6,13 @@ import Footer from '../components/Footer';
 import Movies from '../components/Movies.js';
 import styles from '../styles/pageFavorites.module.css';
 import { getFavorites } from '../components/LocalStorageFavorites.js';
-//import { handleCurrentPage } from '../components/CurrentPage';
+
 
 
 function PageFavorites() {
 
     window.scrollTo(0, 0);
-    //handleCurrentPage('favorites');
+  
 
     useEffect(() => {
         document.title = 'cinemaFile - Favorites';

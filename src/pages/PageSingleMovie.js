@@ -7,14 +7,12 @@ import Footer from '../components/Footer';
 import styles from '../styles/pageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
-//import { handleCurrentPage } from '../components/CurrentPage';
 
 
 
 function PageSingleMovie() {
     
     window.scrollTo(0, 0);
-    //handleCurrentPage('single');
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
