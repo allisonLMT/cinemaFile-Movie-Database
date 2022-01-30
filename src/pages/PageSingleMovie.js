@@ -16,6 +16,7 @@ function PageSingleMovie() {
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
+    const [castCrew, setCastCrew] = useState(null);
 
     useEffect(() => {
        
@@ -25,6 +26,13 @@ function PageSingleMovie() {
             setMovie(movieDataFromAPI);
         }
         getMovie();
+
+        const getCast = async () => {
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}&language=en-US`);
+            const castCrewDataFromAPI = await res.json();
+            setCastCrew(castCrewDataFromAPI);
+        }
+        getCast();
     }, []);
 
     useEffect(() => {
@@ -33,13 +41,12 @@ function PageSingleMovie() {
        }
     }, [movie])
    
-    console.log(movie)
+    console.log(castCrew)
     
     return (
         <div className='page-container'>
             <DesktopNav pageName='single'/>
                 <div className = {`content-wrap ${styles.singleMovie}`}>
-                    {/* conditional render of the movie info */}
                     {movie !== null ?  
                         <div className={styles.movie}>
                             <div className={styles.singleMoviePoster}>
@@ -58,11 +65,24 @@ function PageSingleMovie() {
 
                                 <h3>Genres: </h3>
                                 {movie.genres.map(genre => <p className={`${styles.inline} ${styles.genres}`} key={genre.id}>{genre.name}</p>)}
-
                             </div>
                         </div>
                     : <p>Fetching movie... </p>}
-                </div>
+                    {castCrew !== null ?
+                        <div className={styles.cast}>
+                            <h3>Cast:</h3>
+
+                            {castCrew.cast.map(castMember =>
+                                <div key={castMember.id}>
+                                    <img src={castMember.profile_path} alt="" />
+                                    <p>"{castMember.character}"</p>
+                                    <p>{castMember.name}</p>
+                                </div>
+                            )}
+                        </div>
+                    : <p>Fetching cast...</p>}
+                {/* end of content-wrap */}
+                </div> 
             <Footer />
             <MobileNav pageName='single'/>
         </div>

@@ -59,6 +59,15 @@ p.overview  {
     width: 100%;
 }
 
+.cast {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    max-width: 500px;
+    border: 2px solid yellowgreen;
+}
+
 p.inline {
     display: inline;
 }
