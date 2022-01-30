@@ -60,7 +60,7 @@ ul {
         background-color: #14213D;
         margin-top: 0.5rem;
     }
-    /* here */
+ 
     .expanded a,
     .collapsed a {
         display: flex;
@@ -73,9 +73,10 @@ ul {
         border-radius: 5px;
         background-color: black;
     }
-    /* here */
-    .expanded a:hover,
-    .collapsed a:hover {
+    
+    /* .expanded a:hover,
+    .collapsed a:hover  */
+    .active {
         border: 2px solid #FCA311;
         border-radius: 5px;
         background-color: #FCA311;
