@@ -50,20 +50,46 @@
   text-decoration: none;
 }
 
-.navLink {
+/* .navLink {
   padding: 40px;
+} */
+
+a.currentPage {
+  padding: 40px;
+  border: 2px solid green;
+}
+
+a.notCurrentPage {
+  padding: 40px;
+  border: 2px solid red;
 }
 
 @media (min-width: 850px) {
   .textNavMenu {
     display: flex;
   }
-  .navLink {
+  .currentPage,
+  .notCurrentPage {
     padding: 40px 60px;
   }
+  /* .navLink {
+    padding: 40px 60px;
+  } */
 }
 
-.navLink,
+.currentPage:visited,
+.notCurrentPage:visited,
+.currentPage:focus,
+.notCurrentPage:focus,
+.currentPage:hover,
+.notCurrentPage:hover,
+.currentPage:active,
+.notCurrentPage:active {
+  color: #FCA311;
+  text-decoration: none;
+}
+
+/* .navLink,
 .navLink:visited {
   color: #FCA311;
   text-decoration: none;
@@ -74,4 +100,5 @@
 .navLink:active {
   color: #FCA311;
   text-decoration: underline;
-}
+} */
+

@@ -3,15 +3,16 @@ import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 import Footer from '../components/Footer';
 import styles from '../styles/pageNotFound.module.css';
+//import { handleCurrentPage } from '../components/CurrentPage';
 
 
-function PageNotFound ( currentPage, handleCurrentPage ) {
+function PageNotFound () {
 
-    handleCurrentPage('notFound');
+    //handleCurrentPage('notFound');
    
     return (
         <div className='page-container'>
-            <DesktopNav currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <DesktopNav pageName='notFound' />
                 <div className='content-wrap'>
                     <h2 className={styles.notFound}>404 Error</h2>
                     <h3 className={styles.notFound}>Page not found.</h3>

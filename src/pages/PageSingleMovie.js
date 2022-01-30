@@ -7,13 +7,14 @@ import Footer from '../components/Footer';
 import styles from '../styles/pageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
+//import { handleCurrentPage } from '../components/CurrentPage';
 
 
 
-function PageSingleMovie( currentPage, handleCurrentPage ) {
+function PageSingleMovie() {
     
     window.scrollTo(0, 0);
-    handleCurrentPage('single');
+    //handleCurrentPage('single');
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
@@ -38,7 +39,7 @@ function PageSingleMovie( currentPage, handleCurrentPage ) {
     
     return (
         <div className='page-container'>
-            <DesktopNav currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <DesktopNav pageName='single'/>
                 <div className = {`content-wrap ${styles.singleMovie}`}>
                     {/* conditional render of the movie info */}
                     {movie !== null ?  

@@ -6,12 +6,13 @@ import Footer from '../components/Footer';
 import Movies from '../components/Movies.js';
 import styles from '../styles/pageFavorites.module.css';
 import { getFavorites } from '../components/LocalStorageFavorites.js';
+//import { handleCurrentPage } from '../components/CurrentPage';
 
 
-function PageFavorites( currentPage, handleCurrentPage ) {
+function PageFavorites() {
 
     window.scrollTo(0, 0);
-    handleCurrentPage('favorite');
+    //handleCurrentPage('favorites');
 
     useEffect(() => {
         document.title = 'cinemaFile - Favorites';
@@ -28,7 +29,7 @@ function PageFavorites( currentPage, handleCurrentPage ) {
 
     return (
         <div className='page-container'>
-            <DesktopNav currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <DesktopNav pageName='favorites' />
             <div className='content-wrap'>
                 <div className={styles.favorites}>
                     <h2>Favorites</h2>

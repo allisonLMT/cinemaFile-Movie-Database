@@ -7,13 +7,14 @@ import DropDownSort from '../components/DropDownSort';
 import Movies from '../components/Movies';
 import styles from '../styles/pageHome.module.css'
 import { API_KEY } from '../globals/variables.js';
+//import { handleCurrentPage } from '../components/CurrentPage';
 
 
 
-function PageHome({ sort, currentPage, handleCurrentPage }) {
+function PageHome({ sort }) {
 
     window.scrollTo(0, 0);
-    handleCurrentPage('home');
+    //handleCurrentPage('home');
     
     useEffect(() => {
         document.title = 'cinemaFile - Home';
@@ -96,7 +97,7 @@ function PageHome({ sort, currentPage, handleCurrentPage }) {
 
     return (
         <div className='page-container'>
-            <DesktopNav reset={reset} origin="home" currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <DesktopNav reset={reset} origin="home" pageName='home'/>
             <div className="content-wrap">
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>

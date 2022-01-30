@@ -1,7 +1,7 @@
- //the array used to store the favorite movies before moving to local storage
- var favMovies = [];
+//the array used to store the favorite movies before moving to local storage
+var favMovies = [];
 
- function indexInFavorites(movie) {
+function indexInFavorites(movie) {
     //  //returns the index of the movie
     let favsFromStorage = localStorage.getItem('favMovies');
 
