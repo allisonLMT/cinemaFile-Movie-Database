@@ -28,7 +28,7 @@ function DropDownSort ( {sortState, handleSortState, reset} ) {
     }
 
     // conditional render on NavLink {`${sortState} === 'popular' ? className=${styles.active} : className=${styles.inactive}`}
-
+    // className = { sortState === 'popular' ? styles.active : styles.inactive }
     return (
         <div className={styles.sortButton}>
             { isCollapsed ? <p  className={styles.sortLabel}  onClick={() => { setIsCollapsed(!isCollapsed)} } >Or View By: {sortName} &#9660;</p> 
@@ -37,16 +37,25 @@ function DropDownSort ( {sortState, handleSortState, reset} ) {
         <nav className={isCollapsed ? styles.collapsed : styles.expanded}>
             <ul>
                 <li>
-                    <NavLink to='/sort/popular' onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('popular') }} >Popular</NavLink>
+                    <NavLink to='/sort/popular'
+                    className = { sortState === 'popular' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('popular') }} 
+                    >Popular</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/top-rated' onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('top_rated') }} >Top Rated</NavLink>
+                    <NavLink to='/sort/top-rated' 
+                    className = { sortState === 'top_rated' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('top_rated') }} >Top Rated</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/now-playing' onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('now_playing') }} >Now Playing</NavLink>
+                    <NavLink to='/sort/now-playing' 
+                    className = { sortState === 'now_playing' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('now_playing') }} >Now Playing</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sort/upcoming' onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('upcoming') }} >Upcoming</NavLink>
+                    <NavLink to='/sort/upcoming' 
+                    className = { sortState === 'upcoming' ? styles.active : styles.inactive }
+                    onClick={() => { setIsCollapsed(!isCollapsed); reset(); handleSortState('upcoming') }} >Upcoming</NavLink>
                 </li>
             </ul>
         </nav>

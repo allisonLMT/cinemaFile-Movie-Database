@@ -61,8 +61,9 @@ ul {
         margin-top: 0.5rem;
     }
  
-    .expanded a,
-    .collapsed a {
+    /* .expanded a,
+    .collapsed a, */
+    a.inactive {
         display: flex;
         justify-content: center;
         align-content: center;
@@ -76,7 +77,7 @@ ul {
     
     /* .expanded a:hover,
     .collapsed a:hover  */
-    .active {
+    a.active {
         border: 2px solid #FCA311;
         border-radius: 5px;
         background-color: #FCA311;
