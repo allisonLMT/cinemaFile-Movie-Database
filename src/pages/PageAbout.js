@@ -39,7 +39,7 @@ function PageAbout() {
                     </section>
                 </div>
                 <Footer />
-            <MobileNav />
+            <MobileNav pageName='about' />
         </div>
     );
 }

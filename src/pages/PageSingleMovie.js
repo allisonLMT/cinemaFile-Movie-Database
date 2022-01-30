@@ -64,7 +64,7 @@ function PageSingleMovie() {
                     : <p>Fetching movie... </p>}
                 </div>
             <Footer />
-            <MobileNav />
+            <MobileNav pageName='single'/>
         </div>
         
     );

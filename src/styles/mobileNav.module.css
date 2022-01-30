@@ -26,10 +26,29 @@
 
 .clickableArea {
     display: flex;
+    height: 50px;
     justify-content: center;
+    align-items: center;
 }
 
 .icon {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+}
+
+.notCurrentPage {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentPage {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #14213D;
 }
