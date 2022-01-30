@@ -7,12 +7,12 @@ import about from '../images/icons/about-me-blue.svg';
 
 
 
-function MobileNav ({ origin, reset }) {
+function MobileNav ({ pageName, reset }) {
     
     return (
         <nav className={styles.mobileNav}>
             <NavLink to="/" className={styles.link}>
-                {origin === "home" ?
+                {pageName === "home" ?
                     <div className={styles.clickableArea} onClick={() => { reset() }} > 
                          <img src={home} alt="" className={styles.icon} />
                     </div> :

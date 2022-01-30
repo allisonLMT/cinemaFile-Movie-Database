@@ -38,7 +38,7 @@ function PageFavorites() {
                 </div>
             </div>
             <Footer />
-            <MobileNav />
+            <MobileNav pageName='favorites' />
         </div>
         
     );

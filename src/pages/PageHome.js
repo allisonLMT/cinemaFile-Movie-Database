@@ -111,7 +111,7 @@ function PageHome({ sort }) {
                 </section>
             </div>
             <Footer />
-            <MobileNav reset={reset} origin="home" />
+            <MobileNav reset={reset} pageName='home' />
         </div>
     );
 };

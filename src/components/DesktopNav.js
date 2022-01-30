@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import styles from '../styles/desktopNav.module.css';
 import logo from '../images/orange-cinemaFile.svg';
 
-
-
 function DesktopNav ({ reset, pageName }) {
 
     return (
