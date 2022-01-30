@@ -10,9 +10,10 @@ import { API_KEY } from '../globals/variables.js';
 
 
 
-function PageHome({ sort, isCurrentPage, handleCurrentPage }) {
+function PageHome({ sort, currentPage, handleCurrentPage }) {
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    handleCurrentPage('home');
     
     useEffect(() => {
         document.title = 'cinemaFile - Home';
@@ -95,7 +96,7 @@ function PageHome({ sort, isCurrentPage, handleCurrentPage }) {
 
     return (
         <div className='page-container'>
-            <DesktopNav reset={reset} origin="home" isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
+            <DesktopNav reset={reset} origin="home" currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
             <div className="content-wrap">
                 <div className={styles.searchSortWrapper}>
                     <div className={styles.searchSort}>

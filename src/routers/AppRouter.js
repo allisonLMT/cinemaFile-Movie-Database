@@ -8,10 +8,10 @@ import PageNotFound from '../pages/PageNotFound';
 
 function AppRouter() {
 
-  const [ isCurrentPage, setIsCurrentPage] = useState('');
+  const [ currentPage, setCurrentPage] = useState('');
 
   function handleCurrentPage(pageType) {
-    setIsCurrentPage(pageType);
+    setCurrentPage(pageType);
   };
 
  
@@ -19,15 +19,15 @@ function AppRouter() {
   return (
     <div className="App">
           <Routes>
-            <Route path='/' exact element={<PageHome sort='popular'isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage}/>} />
-            <Route path='/sort/popular' element={<PageHome sort='popular'isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage}/>} />
-            <Route path='/sort/top-rated' element={<PageHome sort='top_rated'isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage}/>} />
-            <Route path='/sort/now-playing' element={<PageHome sort='now_playing'isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage}/>} />
-            <Route path='/sort/upcoming' element={<PageHome sort='upcoming'/>} isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
-            <Route path='/movie/:id' element={<PageSingleMovie />} isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
-            <Route path='favorites' element={<PageFavorites />} isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
-            <Route path='about' element={<PageAbout />} isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
-            <Route path='*' element={<PageNotFound />} isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
+            <Route path='/' exact element={<PageHome sort='popular'currentPage={currentPage} handleCurrentPage={handleCurrentPage}/>} />
+            <Route path='/sort/popular' element={<PageHome sort='popular'currentPage={currentPage} handleCurrentPage={handleCurrentPage}/>} />
+            <Route path='/sort/top-rated' element={<PageHome sort='top_rated'currentPage={currentPage} handleCurrentPage={handleCurrentPage}/>} />
+            <Route path='/sort/now-playing' element={<PageHome sort='now_playing'currentPage={currentPage} handleCurrentPage={handleCurrentPage}/>} />
+            <Route path='/sort/upcoming' element={<PageHome sort='upcoming'/>} currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <Route path='/movie/:id' element={<PageSingleMovie />} currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <Route path='favorites' element={<PageFavorites />} currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <Route path='about' element={<PageAbout />} currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
+            <Route path='*' element={<PageNotFound />} currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
           </Routes>
     </div>
   );

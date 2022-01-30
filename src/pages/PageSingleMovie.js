@@ -10,8 +10,11 @@ import MovieRatingCircle from '../components/MovieRatingCircle';
 
 
 
-function PageSingleMovie( isCurrentPage, handleCurrentPage ) {
-    window.scrollTo(0, 0)
+function PageSingleMovie( currentPage, handleCurrentPage ) {
+    
+    window.scrollTo(0, 0);
+    handleCurrentPage('single');
+
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
 
@@ -35,7 +38,7 @@ function PageSingleMovie( isCurrentPage, handleCurrentPage ) {
     
     return (
         <div className='page-container'>
-            <DesktopNav isCurrentPage={isCurrentPage} handleCurrentPage={handleCurrentPage} />
+            <DesktopNav currentPage={currentPage} handleCurrentPage={handleCurrentPage} />
                 <div className = {`content-wrap ${styles.singleMovie}`}>
                     {/* conditional render of the movie info */}
                     {movie !== null ?  

@@ -5,7 +5,7 @@ import logo from '../images/orange-cinemaFile.svg';
 
 
 
-function DesktopNav ({ origin, reset }) {
+function DesktopNav ({ origin, reset, currentPage, handleCurrentPage }) {
     
     return (
         <nav className={styles.desktopNav}>
