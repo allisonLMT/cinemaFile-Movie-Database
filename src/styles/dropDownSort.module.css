@@ -33,7 +33,8 @@ ul {
     border-top: 1px solid #FCA311;
 }
 
-.expanded a:last-child {
+.expanded a:last-child,
+.collapsed a:last-child {
     border-bottom: 1px solid #FCA311;
 }
 .expanded a,

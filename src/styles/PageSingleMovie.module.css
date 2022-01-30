@@ -46,6 +46,12 @@ p.overview  {
     max-width: 500px;
 }
 
+@media (min-width: 1050px) {
+    .singleMovieInfo {
+        padding: 0 25px;
+    }
+}
+
 .dateHeart {
     display: flex;
     align-items: center;
