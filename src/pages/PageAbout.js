@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 import Footer from '../components/Footer';
