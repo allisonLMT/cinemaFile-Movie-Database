@@ -31,7 +31,8 @@ p.overview  {
     display: inline-block;
     position: relative;
     max-width: 500px;
-    filter: drop-shadow(7px 7px 7px black)
+    filter: drop-shadow(7px 7px 7px black);
+    border: 2px solid green;
 }
 
 .singleMovie h3,
