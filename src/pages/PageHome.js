@@ -103,7 +103,7 @@ function PageHome({ sort }) {
                 </div>
                 {noResults === true && <p className={styles.noResults}>No search results found.</p>}
                 
-                <section className="movies">
+                <section className={styles.moviesWrap}>
                     {moviesData !== null ? <Movies moviesData={moviesData} /> :
                     <p className="message" >Fetching movies...</p>}
                 </section>

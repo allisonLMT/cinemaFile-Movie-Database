@@ -1,6 +1,7 @@
 /* Styling of the full list of movies */
 
 .movies {
+   max-width: 1328px;
    display: flex;
    justify-content: center;
    flex-wrap: wrap;

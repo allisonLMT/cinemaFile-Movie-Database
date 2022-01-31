@@ -6,7 +6,8 @@ import logo from '../images/orange-cinemaFile.svg';
 function DesktopNav ({ reset, pageName }) {
 
     return (
-        <nav className={styles.desktopNav}>
+        <nav className={styles.desktopNavWrap}>
+            <div className={styles.desktopNav}>
                 <NavLink to="/" className={styles.logoNavLink}>
                     {pageName === "home" ?
                     <div className={styles.navLogos} onClick={() => { reset() }} >
@@ -36,6 +37,7 @@ function DesktopNav ({ reset, pageName }) {
                         className = {pageName === 'about' ? styles.currentPage : styles.notCurrentPage } 
                         >About</NavLink>
                 </div>
+            </div>
         </nav>
         
     );

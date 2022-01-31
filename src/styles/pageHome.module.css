@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.moviesWrap {
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 996px) {
     .searchSortWrapper {
         display: flex;
