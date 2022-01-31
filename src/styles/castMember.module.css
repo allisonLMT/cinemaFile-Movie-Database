@@ -8,7 +8,7 @@
     margin: 0.5rem 0;
     border: 1px solid #FCA311;
     border-radius: 3px;
-    filter: drop-shadow(2px 2px 2px black)
+    filter: drop-shadow(5px 5px 5px black)
 }
 
 .castMember p {
@@ -20,17 +20,21 @@
     filter: drop-shadow(2px 2px 2px black)
 }
 
-p.character {
+.character {
     color: #FCA311;
     text-decoration: none;
 }
 
-p.name {
+.name {
     color: white;
     text-decoration: none;
 }
 
-.castMember a {
+.castMember a,
+.castMember a:visited,
+.castMember a:focus,
+.castMember a:hover,
+.castMember a:active {
     text-decoration: none;
 }
 
