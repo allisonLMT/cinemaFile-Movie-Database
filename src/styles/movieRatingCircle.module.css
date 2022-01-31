@@ -16,20 +16,15 @@
     color: #FCA311;
 }
 
-.topRatingCircle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    height: 65px;
-    width: 65px;
-    background-color: #14213D;
-    border-radius: 50%;
-    border: 3px solid #FCA311;
-    font-size: 24px;
-    color: #FCA311;
+@media (min-width: 550px) {
+    .circle {
+        width: 75px;
+        height: 75px;
+        right: 25px;
+        top: 25px;
+        font-size: 26px; 
+        border: 3px solid #FCA311;
+    }
 }
 
 .percent p {

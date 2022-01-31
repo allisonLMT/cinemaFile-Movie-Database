@@ -88,23 +88,6 @@ p.genres:last-child:after {
         max-width: 450px;
         margin-left: 3rem;
     }
-    .singleMovieInfo img {
-        /* heart */
-        position: absolute;
-        right: 25px;
-        top: 25px;
-        height: 45px;
-        width: 45px;
-    }
-    .singleMoviePoster div {
-        /* Rating Circle */
-        position: absolute;
-        width: 65px;
-        height: 65px;
-        right: 25px;
-        top: 25px;
-        font-size: 22px;
-    }
 }
 
 

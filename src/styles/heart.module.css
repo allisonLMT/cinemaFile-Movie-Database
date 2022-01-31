@@ -9,4 +9,10 @@
     filter: drop-shadow(5px 5px 5px black)
 }
 
+@media (min-width: 550px) {
+    .heart {
+        height: 40px;
+        width: 40px;
+    }
+}
 
