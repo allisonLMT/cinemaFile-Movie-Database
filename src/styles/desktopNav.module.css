@@ -60,11 +60,13 @@
 
 a.currentPage {
   padding: 40px;
+  color: #FCA311;
   text-decoration: underline;
 }
 
 a.notCurrentPage {
   padding: 40px;
+  color: #FCA311;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }
@@ -80,6 +82,8 @@ a.notCurrentPage {
     padding: 40px 60px;
   }
 }
+
+
 
 a.currentPage:visited,
 a.notCurrentPage:visited,

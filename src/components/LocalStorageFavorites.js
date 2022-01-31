@@ -55,8 +55,15 @@ function removeFavorite (movie) {
 }
 
 function getFavorites() {
-    var storedFaves = JSON.parse(localStorage.getItem('favMovies'));
-    return storedFaves;
+
+    let storedFaves = localStorage.getItem('favMovies');
+
+    if ( storedFaves === null ) {
+        return [];
+    } else {
+        storedFaves = JSON.parse(storedFaves);
+        return storedFaves;
+    } 
 }
 
 export { addFavorite, removeFavorite, getFavorites, indexInFavorites };
