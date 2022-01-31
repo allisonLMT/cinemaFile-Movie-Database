@@ -1,0 +1,8 @@
+.fullClass {
+    border: 3px dashed yellow;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: flex-start;
+    text-align: left;
+}

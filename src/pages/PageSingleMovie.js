@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import styles from '../styles/pageSingleMovie.module.css';
 import Heart from '../components/Heart';
 import MovieRatingCircle from '../components/MovieRatingCircle';
+import FullCast from '../components/FullCast';
 
 
 
@@ -71,14 +72,7 @@ function PageSingleMovie() {
                     {castCrew !== null ?
                         <div className={styles.cast}>
                             <h3>Cast:</h3>
-
-                            {castCrew.cast.map(castMember =>
-                                <div key={castMember.id}>
-                                    <img src={castMember.profile_path} alt="" />
-                                    <p>"{castMember.character}"</p>
-                                    <p>{castMember.name}</p>
-                                </div>
-                            )}
+                            <FullCast castData={castCrew} />
                         </div>
                     : <p>Fetching cast...</p>}
                 {/* end of content-wrap */}
