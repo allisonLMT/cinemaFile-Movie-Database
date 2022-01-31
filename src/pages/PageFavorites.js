@@ -33,8 +33,10 @@ function PageFavorites() {
             <div className='content-wrap'>
                 <div className={styles.favorites}>
                     <h2>Favorites</h2>
-                    {localFaves.length > 0 ? <Movies moviesData={localFaves} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves}/> :
-                        <p className={styles.none}>You don't have any favorites yet. Visit the <Link to="/sort/popular">homepage</Link> to add some. </p>}
+                    <div className={styles.favoritesWrap}>
+                        {( localFaves > 0) ? <Movies moviesData={localFaves} localFaves={localFaves} handleUpdateFaves={handleUpdateFaves}/> :
+                            <p className={styles.none}>You don't have any favorites yet. Visit the <Link to="/sort/popular">homepage</Link> to add some. </p>}
+                    </div>
                 </div>
             </div>
             <Footer />
