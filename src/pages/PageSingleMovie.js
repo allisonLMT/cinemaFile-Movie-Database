@@ -42,7 +42,6 @@ function PageSingleMovie() {
        }
     }, [movie])
    
-    console.log(castCrew)
     
     return (
         <div className='page-container'>

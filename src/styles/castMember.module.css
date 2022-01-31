@@ -1,3 +1,7 @@
+/* styling for each cast member */
+/* includes photo, character name, actor name */
+
+
 .castMember {
     border: 2px solid blue;
     width: 50%;
@@ -6,4 +10,10 @@
 
 .castMember p {
     display: block;
+}
+
+@media (min-width: 1050px) {
+    .castMember {
+        width: 25%;
+    }
 }

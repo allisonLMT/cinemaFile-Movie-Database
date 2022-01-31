@@ -34,7 +34,8 @@ p.overview  {
     filter: drop-shadow(7px 7px 7px black)
 }
 
-.singleMovie h3 {
+.singleMovie h3,
+.cast h3 {
     color: #FCA311;
     margin-bottom: 0.5rem;
 }
@@ -60,9 +61,15 @@ p.overview  {
 }
 
 .cast {
-    border: 2px solid pink;
     width: 100%;
     max-width: 500px;
+    margin-top: 40px;
+}
+
+@media (min-width: 1050px) {
+    .cast {
+        max-width: 1000px;
+    }
 }
 
 p.inline {
