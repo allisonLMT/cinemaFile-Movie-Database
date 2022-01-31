@@ -3,17 +3,26 @@
 
 
 .castMember {
-    border: 2px solid blue;
-    width: 50%;
-    
+    width: 47%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid #FCA311;
+    border-radius: 3px;
+    filter: drop-shadow(2px 2px 2px black)
 }
 
 .castMember p {
     display: block;
+    text-align: center;
+}
+
+.castMember img {
+    filter: drop-shadow(2px 2px 2px black)
 }
 
 @media (min-width: 1050px) {
     .castMember {
-        width: 25%;
+        padding: 15px;
+        width: 23%;  
     }
 }

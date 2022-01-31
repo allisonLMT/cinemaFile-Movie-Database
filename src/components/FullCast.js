@@ -7,7 +7,7 @@ import styles from '../styles/fullCast.module.css';
 function FullCast({ castData }) {
 
     return (
-        <div className={styles.fullClass}>
+        <div className={styles.fullCast}>
             {castData.cast.map(castMember =>
                 <CastMember castMember={castMember} key={castMember.id}/>
             )}
