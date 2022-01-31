@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/oneMovie.module.css';
 import ratingStyles from '../styles/movieRatingCircle.module.css';
-import noPoster from '../images/movie-image-not-available.png';
+import noImage from '../images/image-not-available.png';
 import RatingCircle from '../components/MovieRatingCircle.js';
 import Heart from '../components/Heart.js';
 import { BASE_URL, SM_POSTER_SIZE } from '../globals/variables.js';
@@ -17,7 +17,7 @@ function OneMovie({ movie, localFaves, handleUpdateFaves }) {
                 <RatingCircle rating={movie.vote_average} className={ratingStyles.circle} />
                 <Link to={`/movie/${movie.id}`}>
                 {movie.poster_path === null ?
-                    <img src={noPoster} alt="Movie Poster Not Available" /> :
+                    <img src={noImage} alt="Movie Poster Not Available" /> :
                     <img src={BASE_URL+SM_POSTER_SIZE+movie.poster_path} alt={movie.title} />
                 }
                 </Link>

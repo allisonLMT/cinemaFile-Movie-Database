@@ -3,7 +3,6 @@ import CastMember from '../components/CastMember';
 import styles from '../styles/fullCast.module.css';
 
 
-
 function FullCast({ castData }) {
 
     return (

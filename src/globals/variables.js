@@ -17,3 +17,7 @@ export const SM_POSTER_SIZE = 'w500';
 export const SEARCH_URL = 'https://https://api.themoviedb.org/3/search/movie?api_key=';
 export const SEARCH_LANG = '&language=en-US&query=';
 export const SEARCH_PAGE_ADULT = '&page=1&include_adult=false';
+
+
+// used to build IMDB path to actor profile
+export const IMDB = 'imdb.com/name/';

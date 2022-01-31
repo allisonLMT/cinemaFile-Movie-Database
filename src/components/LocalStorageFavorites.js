@@ -18,11 +18,9 @@ function indexInFavorites(movie) {
     const movieIndex = favsFromStorage.findIndex(isMovieInFavs);  
     
     return movieIndex;
-
 };
 
 function addFavorite (movie) {
-    console.log("adding to favorites");
 
     var movieIndex = indexInFavorites(movie);
     
@@ -37,7 +35,6 @@ function addFavorite (movie) {
 
 
 function removeFavorite (movie) {
-    console.log("removing from favorites")
 
     // parse the localStorage of favMovies, then find the index of the movie within the array     
     // (or returns -1 if doesn't exist)
