@@ -8,4 +8,5 @@
     align-content: flex-start;
     text-align: left;
     width: 100%;
+    max-width: 1328px;
 }

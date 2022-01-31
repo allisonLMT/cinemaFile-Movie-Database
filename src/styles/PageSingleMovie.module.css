@@ -9,8 +9,10 @@
 .movie {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 1328px;
 }
 
 .movie h2 {
@@ -47,10 +49,12 @@ p.overview  {
     max-width: 500px;
 }
 
+
 @media (min-width: 1050px) {
     .singleMovieInfo {
         padding: 0 25px;
     }
+
 }
 
 .dateHeart {
@@ -74,6 +78,13 @@ p.overview  {
 
 p.inline {
     display: inline;
+}
+
+@media (min-width: 1328px) {
+    .cast {
+        width: 100%;
+        max-width: 1328px;
+    }
 }
 
 p.genres:after {
