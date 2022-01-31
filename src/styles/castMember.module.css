@@ -1,0 +1,46 @@
+/* styling for each cast member */
+/* includes photo, character name, actor name */
+
+
+.castMember {
+    width: 47%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid #FCA311;
+    border-radius: 3px;
+    filter: drop-shadow(5px 5px 5px black)
+}
+
+.castMember p {
+    display: block;
+    text-align: center;
+}
+
+.castMember img {
+    filter: drop-shadow(2px 2px 2px black)
+}
+
+.character {
+    color: #FCA311;
+    text-decoration: none;
+}
+
+.name {
+    color: white;
+    text-decoration: none;
+}
+
+.castMember a,
+.castMember a:visited,
+.castMember a:focus,
+.castMember a:hover,
+.castMember a:active {
+    text-decoration: none;
+}
+
+@media (min-width: 1050px) {
+    .castMember {
+        padding: 15px;
+        width: 23%;  
+    }
+}
