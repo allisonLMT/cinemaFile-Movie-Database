@@ -80,12 +80,6 @@ p.inline {
     display: inline;
 }
 
-@media (min-width: 1328px) {
-    .cast {
-        width: 100%;
-        max-width: 1328px;
-    }
-}
 
 p.genres:after {
     content: ', ';
