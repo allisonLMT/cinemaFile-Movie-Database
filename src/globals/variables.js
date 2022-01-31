@@ -13,3 +13,6 @@ export const SM_POSTER_SIZE = 'w500';
 
 // used to build IMDB path to actor profile
 export const IMDB = 'https://imdb.com/name/';
+
+// file path for the app
+export const APP_FOLDER_NAME = "/cinemaFile";
