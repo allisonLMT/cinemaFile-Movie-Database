@@ -4,7 +4,6 @@ import styles from '../styles/castMember.module.css';
 import noImage from '../images/image-not-available.png';
 
 
-
 function CastMember({ castMember }) {
 
     const [actor, setActor] = useState(null);

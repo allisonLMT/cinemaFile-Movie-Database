@@ -10,7 +10,6 @@ import MovieRatingCircle from '../components/MovieRatingCircle';
 import FullCast from '../components/FullCast';
 
 
-
 function PageSingleMovie() {
     
     window.scrollTo(0, 0);

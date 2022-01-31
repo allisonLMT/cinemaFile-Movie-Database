@@ -7,7 +7,6 @@ import { getFavorites } from '../components/LocalStorageFavorites.js';
 
 function Heart({movie, handleUpdateFaves }) {
 
-   //useState to manage which heart to display
    //indexInFavorites returns the index of the movie in the Favorites, if it exists
     const [favorite, setFavorite] = useState(indexInFavorites(movie));
 
@@ -27,11 +26,8 @@ function Heart({movie, handleUpdateFaves }) {
             //sets state on the localFaves to the current value of the faves in local storage
             handleUpdateFaves(getFavorites());
         }
-
-        
     };
 
-    
     return (
        <div>
             {favorite === -1 ?
