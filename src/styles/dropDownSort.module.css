@@ -31,18 +31,16 @@ ul {
     display: block;
     padding: 10px 0;
     border-top: 1px solid #FCA311;
+    text-decoration: none;
+    color: #FCA311;
+    font-weight: 600;
 }
 
 .expanded a:last-child,
 .collapsed a:last-child {
     border-bottom: 1px solid #FCA311;
 }
-.expanded a,
-.collapsed a {
-    text-decoration: none;
-    color: #FCA311;
-    font-weight: 600;
-}
+
 
 
 @media (min-width: 800px) {
@@ -87,11 +85,6 @@ ul {
         color: black;
         filter: drop-shadow(3px 3px 3px black);
     }
-    
-    .expanded a:hover,
-    .collapsed a:hover {
-        color: black;
-    } 
 
     .sortLabel {
         display: none;
