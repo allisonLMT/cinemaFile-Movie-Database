@@ -14,10 +14,10 @@ export const SM_POSTER_SIZE = 'w500';
 //to build a path for a search SEARCH_URL + API_KEY + SEARCH_LANG + title + SEARCH_PAGE_ADULT
 //will give results and then you'll need to know which one to display
 
-export const SEARCH_URL = 'https://https://api.themoviedb.org/3/search/movie?api_key=';
+export const SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?api_key=';
 export const SEARCH_LANG = '&language=en-US&query=';
 export const SEARCH_PAGE_ADULT = '&page=1&include_adult=false';
 
 
 // used to build IMDB path to actor profile
-export const IMDB = 'imdb.com/name/';
+export const IMDB = 'https://imdb.com/name/';

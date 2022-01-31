@@ -20,6 +20,20 @@
     filter: drop-shadow(2px 2px 2px black)
 }
 
+p.character {
+    color: #FCA311;
+    text-decoration: none;
+}
+
+p.name {
+    color: white;
+    text-decoration: none;
+}
+
+.castMember a {
+    text-decoration: none;
+}
+
 @media (min-width: 1050px) {
     .castMember {
         padding: 15px;

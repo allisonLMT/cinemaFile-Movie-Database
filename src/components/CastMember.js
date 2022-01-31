@@ -17,41 +17,30 @@ function CastMember({ castMember }) {
         }
         getActor();
     }, []);
-    
-    //console.log(actor)
 
     return (
         <div className={styles.castMember}>
             { ( actor !== null && actor.imdb_id !== null ) ? 
-            console.log(actor.imdb_id) 
-            // <a href={IMDB+actor.imdb_id}>imdb link</a>
-            
-            
+                <div> 
+                    <a href={IMDB+actor.imdb_id} rel="noopener">
+                        {castMember.profile_path !== null ?
+                        <img src={BASE_URL+SM_POSTER_SIZE+castMember.profile_path} alt={castMember.name} />
+                        : <img src={noImage} alt="Not Available" />
+                        }
+                        <p className={styles.character}>"{castMember.character}"</p>
+                        <p className={styles.name}>{castMember.name}</p>
+                    </a>
+                </div>
             : 
-            console.log('huh?')
-            
-            
-            }
-
-        
-            {castMember.profile_path !== null ?
-                <img src={BASE_URL+SM_POSTER_SIZE+castMember.profile_path} alt={castMember.name} />
-                : <img src={noImage} alt="Not Available" />
-            }
-            <p>"{castMember.character}"</p>
-            <p>{castMember.name}</p>
-               
-            {/* :
-            <div>
-                {castMember.profile_path !== null ?
-                    <img src={BASE_URL+SM_POSTER_SIZE+castMember.profile_path} alt={castMember.name} />
-                    : <img src={noImage} alt="Not Available" />
+                <div>
+                    {castMember.profile_path !== null ?
+                        <img src={BASE_URL+SM_POSTER_SIZE+castMember.profile_path} alt={castMember.name} />
+                        : <img src={noImage} alt="Not Available" />
                     }
                     <p>"{castMember.character}"</p>
                     <p>{castMember.name}</p>
-            </div>     */}
-            
-            
+                </div>
+            }
         </div>
     )
 }
