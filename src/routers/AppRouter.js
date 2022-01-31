@@ -6,13 +6,14 @@ import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
 import PageNotFound from '../pages/PageNotFound';
 
+
 function AppRouter() {
 
  
 
   return (
     <div className="App">
-          <Routes>
+          <Routes >
             <Route path='/' exact element={<PageHome sort='popular'/>} />
             <Route path='/sort/popular' element={<PageHome sort='popular'/>} />
             <Route path='/sort/top-rated' element={<PageHome sort='top_rated'/>} />

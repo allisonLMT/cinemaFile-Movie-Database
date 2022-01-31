@@ -8,7 +8,7 @@ import AppRouter from './routers/AppRouter';
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename='cinemafile'>
     <AppRouter />
   </BrowserRouter>,
   document.getElementById('root')
