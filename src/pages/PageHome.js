@@ -60,7 +60,7 @@ function PageHome({ sort }) {
            
         } else {
             setInput('')
-            //if the search term was deleted, then the display goes back to the default ('popular')
+            //if the search term was deleted, then the display returns to the default ('popular')
             if (sortState === 'search' && searchTerm === '') {
                 setSortState('popular');
                 sort = 'popular';

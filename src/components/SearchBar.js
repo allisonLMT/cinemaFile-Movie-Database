@@ -10,9 +10,10 @@ function SearchBar ({ handleSearchTerm, input, handleSearchInput }) {
         const regex = /[^a-z0-9.]+/i;
         const sanitizedInputValue = inputValue.replace(regex, '');
        
+        //sets the input value to the users input (as-is)
         handleSearchInput(inputValue);
 
-        //handles the search term that is used in the actual fetching of data from the API
+        //sets the search term that is used to fetch the API data to the sanitized term
         handleSearchTerm(sanitizedInputValue);
     };
 
